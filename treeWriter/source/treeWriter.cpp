@@ -76,7 +76,6 @@ readerScanner::readerScanner() : ScanInterface(), init(false), showFlags(false),
 readerScanner::~readerScanner(){
 	if(init){ // Handle some cleanup.
 	}
-	// channelEventTree->Write();
 	file_channelEventTree->Close();
 	delete currentEvent;
 }

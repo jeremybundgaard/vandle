@@ -1,179 +1,208 @@
-#ifndef SKELETON_HPP
-#define SKELETON_HPP
+#ifndef XIADATA_HPP
+#define XIADATA_HPP
 
-#include <string>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <vector>
+#include <stdlib.h>
 
-#include "Unpacker.hpp"
-#include "ScanInterface.hpp"
+/*! \brief A pixie16 channel event
+ *
+ * All data is grouped together into channels.  For each pixie16 channel that
+ * fires the energy, time (both trigger time and event time), and trace (if
+ * applicable) are obtained.  Additional information includes the channels
+ * identifier, calibrated energies, trace analysis information.
+ * Note that this currently stores raw values internally through pixie word types
+ *   but returns data values through native C types. This is potentially non-portable.
+ */
+class XiaData{
+public:
+    unsigned short energy; /// Raw pixie energy.
+    double time; /// Raw pixie event time. Measured in filter clock ticks (8E-9 Hz for RevF).
 
-class TFile;
-class TTree;
+    size_t traceLength;
+    unsigned short *adcTrace; /// ADC trace capture.
 
-///////////////////////////////////////////////////////////////////////////////
-// class readerUnpacker
-///////////////////////////////////////////////////////////////////////////////
+    size_t numQdcs; /// Number of QDCs onboard.
+    unsigned int *qdcValue; /// QDCs from onboard.
 
-class readerUnpacker : public Unpacker {
-  public:
-  	/// Default constructor.
-	readerUnpacker() : Unpacker() {  }
+    unsigned short headerLength; /// Length of the pixie header in words.
+    unsigned short eventLength; /// Length of the total event in words.
 
-	/// Destructor.
-	~readerUnpacker(){  }
+    unsigned short crateNum; /// Crate number.
+    unsigned short slotNum; ///Slot number (not the same as the module number).
+    unsigned short modNum; /// Module number (not the same as the slot number).
+    unsigned short chanNum; /// Channel number.
+    unsigned short cfdTime; /// CFD trigger time in units of 1/256 pixie clock ticks.
+    unsigned int eventTimeLo; /// Lower 32 bits of pixie16 event time.
+    unsigned int eventTimeHi; /// Upper 32 bits of pixie16 event time.
 
-  private:
-	/** Process all events in the event list.
-	  * \param[in]  addr_ Pointer to a ScanInterface object.
-	  * \return Nothing.
+    bool virtualChannel; /// Flagged if generated virtually in Pixie DSP.
+    bool pileupBit; /// Pile-up flag from Pixie.
+    bool saturatedBit; /// Saturation flag from Pixie.
+    bool cfdForceTrig; /// CFD was forced to trigger.
+    bool cfdTrigSource; /// The ADC that the CFD/FPGA synched with.
+	bool outOfRange; /// Set to true if the trace is saturated.
+
+    /// Default constructor.
+    XiaData();
+
+    /// Constructor from a pointer to another XiaData.
+    XiaData(XiaData *other_);
+
+    /// Virtual destructor.
+    virtual ~XiaData();
+
+    /// Get the event ID number (mod * chan).
+    int getID(){ return(modNum*16+chanNum); }
+
+	/// Fill the trace by reading from a character array.
+	void copyTrace(char *ptr_, const unsigned short &size_);
+
+	/// Fill the QDC array by reading a character array.
+	void copyQDCs(char *ptr_, const unsigned short &size_);
+
+    /// Return true if the time of arrival for rhs is later than that of lhs.
+    static bool compareTime(XiaData *lhs, XiaData *rhs){ return (lhs->time < rhs->time); }
+
+    /// Return true if lhs has a lower event id (mod * chan) than rhs.
+    static bool compareChannel(XiaData *lhs, XiaData *rhs){ return ((lhs->modNum*lhs->chanNum) < (rhs->modNum*rhs->chanNum)); }
+
+    /// Return one of the onboard qdc values.
+    unsigned int getQdcValue(const size_t &id){ return (id < 0 || id >= numQdcs ? -1 : qdcValue[id]); }
+
+    /// Clear all variables.
+    void clear();
+
+    /// Delete the trace.
+    void clearTrace();
+
+    /// Delete the QDC array.
+    void clearQDCs();
+
+    /// Print event information to the screen.
+    void print();
+
+    /// Print additional information to the screen.
+    virtual void print2(){ }
+
+	/** Responsible for decoding individual pixie events from a binary input file.
+	  * \param[in]  buf         Pointer to an array of unsigned ints containing raw event data.
+	  * \param[in]  module      The current module number being scanned.
+	  * \param[out] bufferIndex The current index in the module buffer.
+	  * \return Only false currently. This method is only a stub.
 	  */
-	virtual void ProcessRawEvent(ScanInterface *addr_=NULL);
+	bool readEventRevD(unsigned int *buf, unsigned int &bufferIndex, unsigned int module=9999);
 
-	/** Add an event to generic statistics output.
-	  * \param[in]  event_ Pointer to the current XIA event.
-	  * \param[in]  addr_  Pointer to a ScanInterface object.
-	  * \return Nothing.
+	/** Responsible for decoding individual pixie events from a binary input file.
+	  * \param[in]  buf         Pointer to an array of unsigned ints containing raw event data.
+	  * \param[in]  module      The current module number being scanned.
+	  * \param[out] bufferIndex The current index in the module buffer.
+	  * \return True if the event was successfully read, or false otherwise.
 	  */
-	virtual void RawStats(XiaData *event_, ScanInterface *addr_=NULL){  }
+	bool readEventRevF(unsigned int *buf, unsigned int &bufferIndex, unsigned int module=9999);
+
+	/// Get the size of the XiaData event when written to disk by ::writeEventRevF (in 4-byte words).
+	size_t getEventLengthRevF();
+
+	/** Write a pixie style event to a binary output file. Output data may
+	  * be written to both an ofstream and a character array. One of the
+	  * pointers must not be NULL.
+	  *
+	  * \param[in] file_ Pointer to an ofstream output binary file.
+	  * \param[in] array_ Pointer to a character array into which data will be written.
+	  * \return The number of bytes written to the file upon success and -1 otherwise.
+	  */
+    int writeEventRevF(std::ofstream *file_, char *array_);
+
+	/** Responsible for decoding events with arbitrary formatting from a binary input file.
+	  * \param[in]  buf         Pointer to an array of unsigned ints containing raw event data.
+	  * \param[in]  modNum     The current module number being scanned.
+	  * \param[out] bufferIndex The current index in the module buffer.
+	  * \return False by default.
+	  */
+    virtual bool readEvent(unsigned int *buf, unsigned int &bufferIndex){ return false; }
+
+	/** Write an arbitrary event to a binary output file. Output data may
+	  * be written to both an ofstream and a character array. One of the
+	  * pointers must not be NULL.
+	  *
+	  * \param[in] file_ Pointer to an ofstream output binary file.
+	  * \param[in] array_ Pointer to a character array into which data will be written.
+	  * \return -1 by default.
+	  */
+    virtual int writeEvent(std::ofstream *file_, char *array_){ return -1; }
 };
 
-///////////////////////////////////////////////////////////////////////////////
-// class readerScanner
-///////////////////////////////////////////////////////////////////////////////
+class ChannelEvent : public XiaData {
+public:
+    bool valid_chan; /// True if the high resolution energy and time are valid.
+    bool ignore; /// Ignore this event.
 
+    double hiresTime; /// High resolution time obtained from the trigger time and the trace phase.
 
-class readerScanner : public ScanInterface {
-  public:
-  	/// Default constructor.
-	readerScanner();
+    float phase; /// Phase (leading edge) of trace (in ADC clock ticks (4E-9 Hz for 250 MHz digitizer)).
+    float baseline; /// The baseline of the trace.
+    float stddev; /// Standard deviation of the baseline.
+    float maximum; /// The baseline corrected maximum value of the trace.
+    float qdc; /// The calculated (baseline corrected) qdc.
+    float qdc2; /// An additional qdc value.
 
-  TFile* file_channelEventTree;
-	TTree* channelEventTree;
+	unsigned short max_index; /// The index of the maximum trace bin (in ADC clock ticks).
+	unsigned short max_ADC; /// The uncorrected maximum ADC value of the trace.
+    unsigned short cfdIndex; /// The index in the trace just above the CFD threshold.
 
-  double Trigger_Time;
-	unsigned short Filter_Energy;
-	unsigned int Event_Time_Lo;
-	unsigned int Event_Time_Hi;
-	unsigned short Crate;
-	unsigned short Slot;
-	unsigned short Module;
-	unsigned short Channel;
-	unsigned short CFD_Time;
-	size_t Trace_Length;
-	unsigned short adc_Trace;
-	size_t num_Qdcs;
-	unsigned int qdc_Value;
-	bool Virtual;
-	bool Pileup;
-	bool Saturated;
-	bool CFD_Force;
-	bool CFD_Trig;
+    float cfdPar[7]; /// Array of floats for storing cfd polynomial fits.
 
-	/// Destructor.
-	~readerScanner();
+    float *cfdvals; ///
 
-	/** ExtraCommands is used to send command strings to classes derived
-	  * from ScanInterface. If ScanInterface receives an unrecognized
-	  * command from the user, it will pass it on to the derived class.
-	  * \param[in]  cmd_ The command to interpret.
-	  * \param[out] arg_ Vector or arguments to the user command.
-	  * \return True if the command was recognized and false otherwise.
+    /// Default constructor.
+    ChannelEvent();
+
+    /// Constructor from a XiaData. ChannelEvent will take ownership of the XiaData.
+    ChannelEvent(XiaData *event_);
+
+    /// Destructor.
+    ~ChannelEvent();
+
+    /// Calculate the trace baseline, baseline standard deviation, and find the pulse maximum.
+    float ComputeBaseline();
+
+    /// Integrate the baseline corrected trace in the range [start_, stop_] and return the result.
+    float IntegratePulse(const size_t &start_=0, const size_t &stop_=0, bool calcQdc2=false);
+
+    /// Perform CFD analysis on the waveform.
+    float AnalyzeCFD(const float &F_=0.5, const size_t &D_=1, const size_t &L_=1);
+
+    /// Clear all variables and clear the trace vector and arrays.
+    void Clear();
+
+	/** Responsible for decoding ChannelEvents from a binary input file.
+	  * \param[in]  buf         Pointer to an array of unsigned ints containing raw event data.
+	  * \param[in]  modNum     The current module number being scanned.
+	  * \param[out] bufferIndex The current index in the module buffer.
+	  * \return True if the event was successfully read, or false otherwise.
 	  */
-	virtual bool ExtraCommands(const std::string &cmd_, std::vector<std::string> &args_);
+	bool readEvent(unsigned int *buf, unsigned int &bufferIndex);
 
-	/** ExtraArguments is used to send command line arguments to classes derived
-	  * from ScanInterface. This method should loop over the optionExt elements
-	  * in the vector userOpts and check for those options which have been flagged
-	  * as active by ::Setup(). This should be overloaded in the derived class.
-	  * \return Nothing.
+	/** Write a ChannelEvent to a binary output file. Output data may
+	  * be written to both an ofstream and a character array. One of the
+	  * pointers must not be NULL.
+	  *
+	  * \param[in] file_ Pointer to an ofstream output binary file.
+	  * \param[in] array_ Pointer to a character array into which data will be written.
+	  * \param[in] recordTrace_ If set to true, the ADC trace will be written to output.
+	  * \return The number of bytes written to the file upon success and -1 otherwise.
 	  */
-	virtual void ExtraArguments();
+	int writeEvent(std::ofstream *file_, char *array_, bool recordTrace_=false);
 
-	/** CmdHelp is used to allow a derived class to print a help statement about
-	  * its own commands. This method is called whenever the user enters 'help'
-	  * or 'h' into the interactive terminal (if available).
-	  * \param[in]  prefix_ String to append at the start of any output. Not used by default.
-	  * \return Nothing.
-	  */
-	virtual void CmdHelp(const std::string &prefix_="");
-
-	/** ArgHelp is used to allow a derived class to add a command line option
-	  * to the main list of options. This method is called at the end of
-	  * from the ::Setup method.
-	  * Does nothing useful by default.
-	  * \return Nothing.
-	  */
-	virtual void ArgHelp();
-
-	/** SyntaxStr is used to print a linux style usage message to the screen.
-	  * \param[in]  name_ The name of the program.
-	  * \return Nothing.
-	  */
-	virtual void SyntaxStr(char *name_);
-
-	/** IdleTask is called whenever a scan is running in shared
-	  * memory mode, and a spill has yet to be received. This method may
-	  * be used to update things which need to be updated every so often
-	  * (e.g. a root TCanvas) when working with a low data rate.
-	  * \return Nothing.
-	  */
-	virtual void IdleTask(){  }
-
-	/** Initialize the map file, the config file, the processor handler,
-	  * and add all of the required processors.
-	  * \param[in]  prefix_ String to append to the beginning of system output.
-	  * \return True upon successfully initializing and false otherwise.
-	  */
-	virtual bool Initialize(std::string prefix_="");
-
-	/** Peform any last minute initialization before processing data.
-	  * /return Nothing.
-	  */
-	virtual void FinalInitialization();
-
-	/** Initialize the root output.
-	  * \param[in]  fname_     Filename of the output root file.
-	  * \param[in]  overwrite_ Set to true if the user wishes to overwrite the output file.
-	  * \return True upon successfully opening the output file and false otherwise.
-	  */
-	virtual bool InitRootOutput(std::string fname_, bool overwrite_=true){ return false; }
-
-	/** Receive various status notifications from the scan.
-	  * \param[in] code_ The notification code passed from ScanInterface methods.
-	  * \return Nothing.
-	  */
-	virtual void Notify(const std::string &code_="");
-
-	/** Return a pointer to the Unpacker object to use for data unpacking.
-	  * If no object has been initialized, create a new one.
-	  * \return Pointer to an Unpacker object.
-	  */
-	virtual Unpacker *GetCore();
-
-	/** Add a channel event to the deque of events to send to the processors.
-	  * This method should only be called from readerUnpacker::ProcessRawEvent().
-	  * \param[in]  event_ The raw XiaData to add to the channel event deque.
-	  * \return False.
-	  */
-	virtual bool AddEvent(XiaData *event_);
-
-	/** Process all channel events read in from the rawEvent.
-	  * This method should only be called from readerUnpacker::ProcessRawEvent().
-	  * \return False.
-	  */
-	virtual bool ProcessEvents();
-
-  private:
-	bool init; /// Set to true when the initialization process successfully completes.
-	bool showFlags;
-	bool showTrace;
-	bool showNextEvent;
-
-	unsigned int numSkip;
-	unsigned int eventsRead;
-
-	XiaData *currentEvent;
-
-
+    /// Print additional information to the screen.
+    virtual void print2();
 };
+
+float calculateP2(const short &x0, unsigned short *y, float *p);
+
+float calculateP3(const short &x0, unsigned short *y, float *p);
 
 #endif
