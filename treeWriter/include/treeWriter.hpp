@@ -46,35 +46,34 @@ class readerScanner : public ScanInterface {
   	/// Default constructor.
 	readerScanner();
 
-  TFile* file_xiaTree;
-	TTree* xiaTree;
+  TFile* file_channelEventTree;
+	TTree* channelEventTree;
 
-  unsigned short energy; /// Raw pixie energy.
-  double time; /// Raw pixie event time. Measured in filter clock ticks (8E-9 Hz for RevF).
+  unsigned short Filter_Energy; /// Raw pixie energy.
+  double Trigger_Time; /// Raw pixie event time. Measured in filter clock ticks (8E-9 Hz for RevF).
 
-  size_t traceLength;
-  unsigned short *adcTrace; /// ADC trace capture.
+  size_t Trace_Length;
+  unsigned short *adc_Trace; /// ADC trace capture.
 
-  size_t numQdcs; /// Number of QDCs onboard.
-  unsigned int *qdcValue; /// QDCs from onboard.
+  size_t num_Qdcs; /// Number of QDCs onboard.
+  unsigned int *qdc_Value; /// QDCs from onboard.
 
   unsigned short headerLength; /// Length of the pixie header in words.
   unsigned short eventLength; /// Length of the total event in words.
 
-  unsigned short crateNum; /// Crate number.
-  unsigned short slotNum; ///Slot number (not the same as the module number).
-  unsigned short modNum; /// Module number (not the same as the slot number).
-  unsigned short chanNum; /// Channel number.
-  unsigned short cfdTime; /// CFD trigger time in units of 1/256 pixie clock ticks.
-  unsigned int eventTimeLo; /// Lower 32 bits of pixie16 event time.
-  unsigned int eventTimeHi; /// Upper 32 bits of pixie16 event time.
+  unsigned short Crate; /// Crate number.
+  unsigned short Slot; ///Slot number (not the same as the module number).
+  unsigned short Module; /// Module number (not the same as the slot number).
+  unsigned short Channel; /// Channel number.
+  unsigned short CFD_Time; /// CFD trigger time in units of 1/256 pixie clock ticks.
+  unsigned int Event_Time_Lo; /// Lower 32 bits of pixie16 event time.
+  unsigned int Event_Time_Hi; /// Upper 32 bits of pixie16 event time.
 
-  bool virtualChannel; /// Flagged if generated virtually in Pixie DSP.
-  bool pileupBit; /// Pile-up flag from Pixie.
-  bool saturatedBit; /// Saturation flag from Pixie.
-  bool cfdForceTrig; /// CFD was forced to trigger.
-  bool cfdTrigSource; /// The ADC that the CFD/FPGA synched with.
-bool outOfRange; /// Set to true if the trace is saturated.
+  bool Virtual; /// Flagged if generated virtually in Pixie DSP.
+  bool Pileup; /// Pile-up flag from Pixie.
+  bool Saturated; /// Saturation flag from Pixie.
+  bool CFD_Force; /// CFD was forced to trigger.
+  bool CFD_Trig; /// The ADC that the CFD/FPGA synched with.
 
 
 	/// Destructor.
