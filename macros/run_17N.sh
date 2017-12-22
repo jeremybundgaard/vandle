@@ -2,7 +2,7 @@
 
 batch=""
 infile=~/links/data/17N/17N_cern/a17_m31_08-4.ldf
-config=~/links/configs/Config-17N-lowgain.xml
+config=~/links/configs/cern/Config-17N-lowgain.xml
 ldf=`basename $infile .ldf`
 
 array=( "$@" )

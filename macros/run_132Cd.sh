@@ -2,7 +2,7 @@
 
 batch=""
 infile=/data/cern/isoldeData/oct/is600/IS600Oct_a132_01.ldf
-config=~/links/configs/132Cd/132Cd_Config_tkedit.xml
+config=~/links/configs/132Cd/132Cd_Config.xml
 ldf=`basename $infile .ldf`
 
 array=( "$@" )
@@ -28,7 +28,7 @@ cd $outdir
 # echo "~/paass/install/bin/utkscan -i $infile --frequency 250 -f R34300 -c $config -o $ldf"
 # ~/paass/install/bin/utkscan -i $infile --frequency 250 -f R34300 -c $config -o $ldf
 
-echo "~/paass/install/bin/utkscan -i $infile -c $config -o $ldf $batch"
-~/paass/install/bin/utkscan -i $infile -c $config -o $ldf $batch
+echo "~/paass/install/bin/utkscan -i $infile -c $config -o $ldf --frequency 250 -f R34300 $batch"
+~/paass/install/bin/utkscan -i $infile -c $config -o $ldf --frequency 250 -f R34300 $batch
 
 cd -
