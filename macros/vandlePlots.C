@@ -7,13 +7,23 @@
 #include "TH1.h"
 #include "TH2.h"
 #include "TMath.h"
+#include "TChain.h"
 #include "TStyle.h"
 #include "TTree.h"
 #include "TGaxis.h"
 #include "TLegend.h"
 #include "TPaveStats.h"
+// #include "/home/jeremy/vandle/macros/vandlePlots.h"
+
+#include "TTreeReader.h"
+#include "TTreeReaderValue.h"
+#include "TSelector.h"
+#include "TProofServ.h"
+#include "TProof.h"
+#include "TROOT.h"
 
 #include <climits>
+
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -23,281 +33,244 @@
 #include <stdlib.h>
 #include <vector>
 
+void makePlots(TTree* dst_local,
+               TTree* dst_NEUTRON_local,
+               TCutG* tcutg_NEUTRON_local,
+               TCutG*  tcutg_BACKGROUND_local,
+               const char* isotope_local,
+               const char* cutChar_local);
 
-void vandlePlots(const char *data_summary_tree = "",const char *otherTreeCuts = "1") {
+void vandlePlots(const char *data_summary_tree_file = "",const char *otherTreeCuts = "1",const char *isotope= "") {
 
- // TGaxis::SetMaxDigits(3);
- // gStyle->SetPalette(kCherry);
- gStyle->SetOptStat("n");
- gStyle->SetTitleOffset(1.2,"Y");
- gStyle->SetNumberContours(99);
+  // TGaxis::SetMaxDigits(3);
+  // gStyle->SetPalette(kCherry);
+  gStyle->SetOptStat("ne");
+  gStyle->SetTitleOffset(1.2,"Y");
+  gStyle->SetNumberContours(99);
+  // gStyle->SetStatFont(63);
+  // gStyle->SetStatFontSize(12);
 
- char buffChar[345];
+  TCutG *tcutg_NEUTRON = new TCutG("tcutg_NEUTRON",3);
+  tcutg_NEUTRON->SetVarX("vandle_TOF");
+  tcutg_NEUTRON->SetVarY("vandle_BarQDC");
+  tcutg_NEUTRON->SetLineWidth(4);
+  tcutg_NEUTRON->SetLineColor(kMagenta);
 
- ///////// initialize track tree /////////
- printf("\n///////// initialize data_summary_tree /////////\n\n");
- TFile *treefile = new TFile(data_summary_tree);
- TTree *dst = (TTree *)treefile->Get("data_summary_tree");
- // dst->SetLineColor(kBlue);
- dst->SetLineWidth(5);
+  ////////   triangle
+  tcutg_NEUTRON->SetPoint(0,80,100);
+  tcutg_NEUTRON->SetPoint(1,400,100);
+  tcutg_NEUTRON->SetPoint(2,80,3000);
+  tcutg_NEUTRON->SetPoint(3,80,100);
 
- unsigned int evtNumber=0;
- unsigned int vandle_barNum=0;
- double vandle_QDC=0;
- double vandle_TOF=0;
- double vandle_TDiff=0;
- dst->SetBranchAddress("evtNumber",&evtNumber);
- dst->SetBranchAddress("vandle_barNum",&vandle_barNum);
- dst->SetBranchAddress("vandle_QDC",&vandle_QDC);
- dst->SetBranchAddress("vandle_TOF",&vandle_TOF);
- dst->SetBranchAddress("vandle_TDiff",&vandle_TDiff);
+  // //////////   square
+  // tcutg_NEUTRON->SetPoint(0,80,100);
+  // tcutg_NEUTRON->SetPoint(1,400,100);
+  // tcutg_NEUTRON->SetPoint(2,400,3000);
+  // tcutg_NEUTRON->SetPoint(3,80,3000);
+  // tcutg_NEUTRON->SetPoint(4,80,100);
 
- TH2D* vandle_QDCvsTOF = new TH2D("vandle_QDCvsTOF","vandle_QDCvsTOF",430,-30,400,500,0,500);
- vandle_QDCvsTOF->SetStats(0);
- vandle_QDCvsTOF->GetXaxis()->SetTitle("ToF [4 nsec/bin]");
- vandle_QDCvsTOF->GetYaxis()->SetTitle("QDC [ADC]");
- dst->Draw("vandle_QDC:vandle_TOF>>vandle_QDCvsTOF","vandle_QDC!=0","colz");
+  TCutG *tcutg_BACKGROUND = new TCutG("tcutg_BACKGROUND",3);
+  tcutg_BACKGROUND->SetVarX("vandle_TOF");
+  tcutg_BACKGROUND->SetVarY("vandle_BarQDC");
+  tcutg_BACKGROUND->SetLineWidth(4);
+  tcutg_BACKGROUND->SetLineColor(kBlue);
 
- TCanvas *wide_canvas = new TCanvas("wide_canvas", "wide_canvas", 3000, 700);
- wide_canvas->SetLogz();
+  ////////   triangle
+  tcutg_BACKGROUND->SetPoint(0,400+80,100);
+  tcutg_BACKGROUND->SetPoint(1,400+400,100);
+  tcutg_BACKGROUND->SetPoint(2,400+80,3000);
+  tcutg_BACKGROUND->SetPoint(3,400+80,100);
 
- TCutG *tcutg_QDC = new TCutG("tcutg_QDC",5);
- tcutg_QDC->SetVarX("vandle_TOF");
- tcutg_QDC->SetVarY("vandle_QDC");
- tcutg_QDC->SetLineWidth(5);
- tcutg_QDC->SetLineColor(kGreen);
+  // //////////   square
+  // tcutg_BACKGROUND->SetPoint(0,400+80,100);
+  // tcutg_BACKGROUND->SetPoint(1,400+400,100);
+  // tcutg_BACKGROUND->SetPoint(2,400+400,3000);
+  // tcutg_BACKGROUND->SetPoint(3,400+80,3000);
+  // tcutg_BACKGROUND->SetPoint(4,400+80,100);
 
- TCutG* tcutg_gma = new TCutG("tcutg_gma",5);
- tcutg_gma->SetVarX("vandle_TOF");
- tcutg_gma->SetVarY("vandle_QDC");
- tcutg_gma->SetLineWidth(5);
- tcutg_gma->SetLineColor(kMagenta);
- tcutg_gma->SetPoint(0,-20,1);
- tcutg_gma->SetPoint(1,-20,5900);
- tcutg_gma->SetPoint(2,50,5900);
- tcutg_gma->SetPoint(3,50,1);
- tcutg_gma->SetPoint(4,-20,1);
+  ///////// initialize track tree /////////
+  printf("\n///////// initialize data_summary_tree /////////\n\n");
+  TFile *treefile = new TFile(data_summary_tree_file);
+  TTree* dst = (TTree*)treefile->Get("data_summary_tree");
+  TTree* dst_NEUTRON;
+  // TTree* dstree = (TTree*)treefile->Get("data_summary_tree");
+  // TChain * dst = new TChain("data_summary_tree");
+  // dst->Add(data_summary_tree_file);
+  // TProof * pr;
+  // pr = TProof::Open("lite://","workers=16");
+  // dst->SetProof();
+  //
+  // gROOT->cd();
+  // TFile* dummyfile = new TFile("dummy.root", "RECREATE");
+  // dummyfile->cd();
+  // TTree* dstree_NEUTRON = (TTree*)dst->CopyTree("tcutg_NEUTRON");
+  // // dstree_NEUTRON->SetLineColor(kMagenta);
+  // dummyfile->Write();
+  // TChain * dst_NEUTRON = new TChain("data_summary_tree");
+  // dst_NEUTRON->Add("dummy.root");
+  // dst_NEUTRON->SetProof();
 
- TCutG* tcutg_fast_nu = new TCutG("tcutg_fast_nu",5);
- tcutg_fast_nu->SetVarX("vandle_TOF");
- tcutg_fast_nu->SetVarY("vandle_QDC");
- tcutg_fast_nu->SetLineWidth(5);
- tcutg_fast_nu->SetLineColor(kBlue);
- tcutg_fast_nu->SetPoint(0,51,1);
- tcutg_fast_nu->SetPoint(1,51,5000);
- tcutg_fast_nu->SetPoint(2,100,5000);
- tcutg_fast_nu->SetPoint(3,100,1);
- tcutg_fast_nu->SetPoint(4,51,1);
+  unsigned int evtNumber=0;
+  unsigned int vandle_barNum=0;
+  double vandle_QDC=0;
+  double vandle_TOF=0;
+  double vandle_TDiff=0;
+  int output_name=0;
 
- TCutG* tcutg_slower_nu = new TCutG("tcutg_slower_nu",5);
- tcutg_slower_nu->SetVarX("vandle_TOF");
- tcutg_slower_nu->SetVarY("vandle_QDC");
- tcutg_slower_nu->SetLineWidth(5);
- tcutg_slower_nu->SetLineColor(kRed);
- tcutg_slower_nu->SetPoint(0,101,1);
- tcutg_slower_nu->SetPoint(1,101,2000);
- tcutg_slower_nu->SetPoint(2,390,1500);
- tcutg_slower_nu->SetPoint(3,390,1);
- tcutg_slower_nu->SetPoint(4,101,1);
- tcutg_slower_nu->SetPoint(5,101,1);
+  dst->SetBranchAddress("vandle_barNum",&vandle_barNum);
+  dst->SetBranchAddress("vandle_BarQDC",&vandle_QDC);
+  dst->SetBranchAddress("vandle_TOF",&vandle_TOF);
+  dst->SetBranchAddress("vandle_TDiff",&vandle_TDiff);
+  dst->SetBranchAddress("output_name",&output_name);
 
- TCutG* tcutg_early_phase_traces = new TCutG("tcutg_early_phase_traces",5);
- tcutg_early_phase_traces->SetVarX("vandle_TOF");
- tcutg_early_phase_traces->SetVarY("vandle_QDC");
- tcutg_early_phase_traces->SetLineWidth(5);
- tcutg_early_phase_traces->SetLineColor(kRed);
- tcutg_early_phase_traces->SetPoint(0,101,1);
- tcutg_early_phase_traces->SetPoint(1,101,2000);
- tcutg_early_phase_traces->SetPoint(2,390,1500);
- tcutg_early_phase_traces->SetPoint(3,390,1);
- tcutg_early_phase_traces->SetPoint(4,101,1);
- tcutg_early_phase_traces->SetPoint(5,101,1);
+  char cutChar[345]="";
+  makePlots(dst,
+    dst_NEUTRON,
+    tcutg_NEUTRON,
+    tcutg_BACKGROUND,
+    isotope,
+    cutChar);
 
- std::vector<std::string> tcutg_TOF;
- tcutg_TOF.push_back("tcutg_gma");
- tcutg_TOF.push_back("tcutg_fast_nu");
- tcutg_TOF.push_back("tcutg_slower_nu");
+  // printf("loop through individual runs\n");
+  // std::set<int> output_name_set;
+  // unsigned int treeEntries = dst->GetEntries();
+  // for (size_t entry = 0; entry < treeEntries; entry++) {
+  //   if (entry%10000000==0) printf("%2.0f%% to go \n", (double)(1-entry/treeEntries)*100);
+  //   dst->GetEntry(entry);
+  //   output_name_set.insert(output_name);
+  // }
+  // for (auto outputName : output_name_set ){
+  //   sprintf(cutChar,"output_name==%d",outputName);
+  //   printf("%s\n",cutChar);
+  //   makePlots(dst,
+  //     dst_NEUTRON,
+  //     tcutg_NEUTRON,
+  //     isotope,
+  //     cutChar);
+  // }
 
- char qdcVStof_QDC_char[234];
- char gamma_traces_plot_char[234],NORM_gamma_traces_plot_char[234];
- char fast_nu_traces_plot_char[234],NORM_fast_nu_traces_plot_char[234];
- char slower_nu_traces_plot_char[234],NORM_slower_nu_traces_plot_char[234];
- int QDC_width=5;
-
- for (int QDC_scanwindow = 20; QDC_scanwindow < 300; QDC_scanwindow+=5){
-
-    tcutg_QDC->SetPoint(0,-200,QDC_scanwindow);
-    tcutg_QDC->SetPoint(1,-200,QDC_scanwindow+QDC_width);
-    tcutg_QDC->SetPoint(2,1000,QDC_scanwindow+QDC_width);
-    tcutg_QDC->SetPoint(3,1000,QDC_scanwindow);
-    tcutg_QDC->SetPoint(4,-200,QDC_scanwindow);
-
-    // TCut scanCut = "tcutg_QDC&&vandle_QDC!=0";
-    wide_canvas->cd();
-    vandle_QDCvsTOF->Draw("colz");
-    tcutg_gma->Draw("same");
-    tcutg_fast_nu->Draw("same");
-    tcutg_slower_nu->Draw("same");
-    tcutg_QDC->Draw("same");
-    sprintf(qdcVStof_QDC_char,"plots/vandle_QDCvsTOF_QDC%05d.png",QDC_scanwindow);
-    wide_canvas->SaveAs(qdcVStof_QDC_char);
-
-    for (auto i : tcutg_TOF) {
-      TF1 *vandleTiming_TF1 = new TF1("vandleTimingFunc",VandleTiming,0,130,5);
-      vandleTiming_TF1->SetLineWidth(5);
-      vandleTiming_TF1->SetParName(0,"#phi");
-      vandleTiming_TF1->SetParName(1,"#alpha");
-      vandleTiming_TF1->SetParName(2,"#beta");
-      vandleTiming_TF1->SetParName(3,"#gamma");
-      vandleTiming_TF1->SetParName(4,"C");
-
-      vandleTiming_TF1->SetParameter(0,50);
-      // vandleTiming_TF1->SetParameter(1,3*trace_means->GetMaximum());
-      vandleTiming_TF1->FixParameter(2,0.254373);
-      vandleTiming_TF1->FixParameter(3,0.208072);
-      vandleTiming_TF1->FixParameter(4,0);
-
-     char cut_name[234];
-     if(!strcmp("tcutg_gma",i.c_str())){
-      vandleTiming_TF1->SetLineColor(kMagenta);
-      sprintf(gamma_traces_plot_char,"plots/vandle_ltrace_QDC%05d_%s.png",QDC_scanwindow,i.c_str());
-      sprintf(NORM_gamma_traces_plot_char,"plots/NORM_vandle_ltrace_QDC%05d_%s.png",QDC_scanwindow,i.c_str());
-      sprintf(cut_name,"Gamma");
-     }
-     if(!strcmp("tcutg_fast_nu",i.c_str())){
-      vandleTiming_TF1->SetLineColor(kBlue);
-      sprintf(fast_nu_traces_plot_char,"plots/vandle_ltrace_QDC%05d_%s.png",QDC_scanwindow,i.c_str());
-      sprintf(NORM_fast_nu_traces_plot_char,"plots/NORM_vandle_ltrace_QDC%05d_%s.png",QDC_scanwindow,i.c_str());
-      sprintf(cut_name,"Faster Neutron");
-     }
-     if(!strcmp("tcutg_slower_nu",i.c_str())){
-      vandleTiming_TF1->SetLineColor(kRed);
-      sprintf(slower_nu_traces_plot_char,"plots/vandle_ltrace_QDC%05d_%s.png",QDC_scanwindow,i.c_str());
-      sprintf(NORM_slower_nu_traces_plot_char,"plots/NORM_vandle_ltrace_QDC%05d_%s.png",QDC_scanwindow,i.c_str());
-      sprintf(cut_name,"Slower Neutron");
-     }
-
-     TH2D* trace_hist_2d = new TH2D("trace_hist_2d","trace_hist_2d",130,0,130,150,-10,140);
-     trace_hist_2d->GetXaxis()->SetTitle("tick [4 nsec/bin]");
-     trace_hist_2d->GetXaxis()->SetRangeUser(20,120);
-     trace_hist_2d->GetYaxis()->SetTitle("QDC");
-     sprintf(buffChar,"tcutg_QDC&&%s",i.c_str());
-     printf("%s\n",buffChar);
-     dst->Draw("(vandle_ltrace-vandle_lAveBaseline):Iteration$>>trace_hist_2d",buffChar);
-     if (trace_hist_2d->GetEntries()==0) continue;
-     sprintf(buffChar,"%s traces [%d < QDC < %d]",cut_name,QDC_scanwindow-QDC_width,QDC_scanwindow+QDC_width);
-     trace_hist_2d->SetTitle(buffChar);
-     trace_hist_2d->Draw("colz");
-
-     TH1D* trace_means = new TH1D("trace_means","trace_means",130,0,130);
-     trace_means->SetName("fit_trace_means");
-     trace_means->GetXaxis()->SetTitle("tick [nsec]");
-     trace_means->GetXaxis()->SetRangeUser(20,120);
-     trace_means->GetYaxis()->SetTitle("QDC");
-     trace_means->SetMarkerColorAlpha(kGreen, 0.0);
-
-     for (int tick_bin = 0; tick_bin <= trace_hist_2d->GetNbinsX(); tick_bin++) {
-        TH1D* proy = trace_hist_2d->ProjectionY("proy",tick_bin,tick_bin);
-        // printf("proy->GetMean():%f\n",proy->GetMean());
-        proy->Draw();
-        trace_means->SetBinContent(tick_bin,proy->GetMean());
-        delete proy;
-     }
-
-     TCanvas *c1 = new TCanvas("c1", "c1", 1000, 700); //c1->SetLogz();
-     TH1D* NORM_trace_means = new TH1D("NORM_trace_means","NORM_trace_means",130,0,130);
-     NORM_trace_means->SetName("fit_NORM_trace_means");
-     NORM_trace_means->GetXaxis()->SetTitle("tick [nsec]");
-     NORM_trace_means->GetXaxis()->SetRangeUser(20,120);
-     NORM_trace_means->GetYaxis()->SetTitle("QDC");
-     NORM_trace_means->SetMarkerColor(kGreen);
-     NORM_trace_means->SetMarkerStyle(33);
-     NORM_trace_means->SetMarkerSize(4);
-     NORM_trace_means->SetLineWidth(5);
-
-     // gStyle->SetStatStyle(0);
-     gStyle->SetStatColor(0);
-     gStyle->SetLegendFillColor(0);
-
-     TLegend* legend = new TLegend(0.4,0.8,0.9,0.9);
-     legend->AddEntry(vandleTiming_TF1,"#alpha e^{-(#tau-#phi)/#beta}(1 - e^{-(#tau-#phi)^{4}/#gamma}) + C ","l");
-
-     trace_means->Fit("vandleTimingFunc");
-     gStyle->SetOptFit(1);
-     trace_hist_2d->SetStats(0);
-     trace_hist_2d->GetYaxis()->SetRangeUser(-10,90);
-     trace_hist_2d->Draw("colz");
-     vandleTiming_TF1->Draw("same");
-     trace_means->Draw("p same");
-
-     legend->Draw();
-     TPaveStats *st_trace_means = (TPaveStats*)trace_means->GetListOfFunctions()->FindObject("stats");
-     st_trace_means->SetX1NDC(0.7); st_trace_means->SetX2NDC(0.9);
-     st_trace_means->SetY1NDC(0.8); st_trace_means->SetY2NDC(0.35);
-
-     sprintf(buffChar,"plots/vandle_ltrace_QDC%05d_%s.png",QDC_scanwindow,i.c_str());
-     c1->SaveAs(buffChar);
-
-     for (int tick_bin = 0; tick_bin <= trace_means->GetNbinsX(); tick_bin++) {
-       double mean = trace_means->GetBinContent(tick_bin);
-        NORM_trace_means->SetBinContent(tick_bin,mean);
-     }
-     NORM_trace_means->Scale(1/NORM_trace_means->GetMaximum());
-     NORM_trace_means->GetYaxis()->SetRangeUser(-0.1,1.4);
-
-     vandleTiming_TF1->SetParameter(0,50);
-     // vandleTiming_TF1->SetParameter(1,3*trace_means->GetMaximum());
-     vandleTiming_TF1->FixParameter(2,0.254373);
-     vandleTiming_TF1->FixParameter(3,0.208072);
-     vandleTiming_TF1->SetParameter(4,0);
-
-     NORM_trace_means->Fit("vandleTimingFunc");
-     gStyle->SetOptFit(1);
-     NORM_trace_means->Draw("hist p");
-     vandleTiming_TF1->Draw("same");
-     legend->Draw();
-     TPaveStats *st_NORM_trace_means = (TPaveStats*)NORM_trace_means->GetListOfFunctions()->FindObject("stats");
-     st_NORM_trace_means->SetX1NDC(0.7); st_NORM_trace_means->SetX2NDC(0.9);
-     st_NORM_trace_means->SetY1NDC(0.8); st_NORM_trace_means->SetY2NDC(0.35);
-
-     sprintf(buffChar,"plots/NORM_vandle_ltrace_QDC%05d_%s.png",QDC_scanwindow,i.c_str());
-     c1->SaveAs(buffChar);
-
-     delete trace_hist_2d;
-     delete trace_means;
-     delete NORM_trace_means;
-     delete c1;
-    }
-
-  sprintf(buffChar,"gm montage -mode concatenate -tile 3x1 %s %s %s plots/traces.png",gamma_traces_plot_char,fast_nu_traces_plot_char,slower_nu_traces_plot_char);
-  system(buffChar);
-
-  sprintf(buffChar,"gm montage -mode concatenate -tile 3x1 %s %s %s plots/NORM_traces.png",NORM_gamma_traces_plot_char,NORM_fast_nu_traces_plot_char,NORM_slower_nu_traces_plot_char);
-  system(buffChar);
-
-  sprintf(buffChar,"gm montage -mode concatenate -tile 1x3 plots/NORM_traces.png plots/traces.png %s qdc_%05d.png",qdcVStof_QDC_char,QDC_scanwindow);
-  system(buffChar);
-
-  sprintf(buffChar,"rm %s %s %s %s plots/traces.png",gamma_traces_plot_char,fast_nu_traces_plot_char,slower_nu_traces_plot_char,qdcVStof_QDC_char);
-  system(buffChar);
-
- }
 }
 
-///This defines the stock VANDLE timing function. Here is a breakdown of the
-/// parameters:
-/// * p[0] = phase
-/// * p[1] = amplitude
-/// * p[2] = beta
-/// * p[3] = gamma
-/// * p[4] = baseline
-Double_t VandleTiming(Double_t *x, Double_t *p) {
- if (x[0] < p[0])
- return p[4];
+void makePlots(TTree* dst_local,
+               TTree* dst_NEUTRON_local,
+               TCutG* tcutg_NEUTRON_local,
+               TCutG*  tcutg_BACKGROUND_local,
+               const char* isotope_local,
+               const char* cutChar_local)
+{
+  gStyle->SetOptStat("ne");
 
- Float_t xx =x[0];
- Double_t fitval = p[1] * std::exp(-p[2] * (xx - p[0])) *
- (1 - std::exp(-std::pow(p[3] * (xx - p[0]), 4.))) + p[4];
+  char buffChar[345];
+  TCanvas *c1 = new TCanvas("c1", "c1", 1000, 700); //c1->SetLogz();
 
- return fitval;
+  c1->SetLogz(1);
+  TH2D* QDCvsTOF = new TH2D("QDCvsTOF","QDCvsTOF",1030,-30,1000,3200,0,3200);
+  sprintf(buffChar,"%s_QDCvsTOF",isotope_local);
+  QDCvsTOF->SetTitle(buffChar);
+  dst_local->Draw("vandle_BarQDC:vandle_TOF>>QDCvsTOF","","colz");
+  char QDCvsTOF_char[345];
+  sprintf(QDCvsTOF_char,"%s_vandle_QDCvsTOF.png",isotope_local);
+  tcutg_NEUTRON_local->Draw("same");
+  tcutg_BACKGROUND_local->Draw("same");
+  c1->SaveAs(QDCvsTOF_char);
+
+  char NEUTRON_TOF_char[345];
+  sprintf(NEUTRON_TOF_char,"%s_NEUTRON_TOF",isotope_local);
+  TH1D* NEUTRON_TOF = new TH1D("NEUTRON_TOF","NEUTRON_TOF",1030,-30,1000);
+  NEUTRON_TOF->SetTitle(isotope_local);
+  NEUTRON_TOF->SetLineColor(kMagenta);
+  dst_local->Draw("vandle_TOF>>NEUTRON_TOF",tcutg_NEUTRON_local->GetName(),"");
+  dst_local->SetLineColor(kBlue);
+  TH1D* neutron_BACKGROUND = new TH1D("neutron_BACKGROUND","neutron_BACKGROUND",1030,-30,1000);
+  dst_local->Draw("vandle_TOF",tcutg_BACKGROUND_local->GetName() ,"same");
+  sprintf(NEUTRON_TOF_char,"../%s_vandleTOF_Neutrons.png",isotope_local);
+  c1->SaveAs(NEUTRON_TOF_char);
+
+  dst_local->Draw("(vandle_TOF-400)>>neutron_BACKGROUND",tcutg_BACKGROUND_local->GetName() ,"same");
+  NEUTRON_TOF->GetXaxis()->SetRangeUser(0,500);
+  NEUTRON_TOF->SetTitle("compare background");
+  NEUTRON_TOF->Draw();
+  neutron_BACKGROUND->Draw("same");
+  c1->SaveAs("neutron_TOF_backgroundCompare.png");
+
+  NEUTRON_TOF->Add(neutron_BACKGROUND,-1);
+  NEUTRON_TOF->SetTitle("neutronTOF");
+  // NEUTRON_TOF->Rebin(4);
+  NEUTRON_TOF->GetXaxis()->SetRangeUser(0,500);
+  NEUTRON_TOF->Draw();
+  c1->SaveAs("neutron_TOF.png");
+
+  sprintf(buffChar,
+    "gm montage -mode concatenate -tile 2x2 %s %s %s %s ../%s_QDCvsTOF_grid_tmp.png",
+    QDCvsTOF_char,
+    "neutron_TOF.png",
+    NEUTRON_TOF_char,
+    "neutron_TOF_backgroundCompare.png",
+    isotope_local);
+  system(buffChar);
+
+  sprintf(buffChar,
+    "gm convert  ../%s_QDCvsTOF_grid_tmp.png -bordercolor Tomato -border 10x10 ../%s_QDCvsTOF_grid.png",
+    isotope_local,
+    isotope_local);
+    system(buffChar);
+    system("rm ../*_QDCvsTOF_grid_tmp.png");
+
+
+
+
+  gStyle->SetOptStat(0);
+
+  char BarvsTOF_char[345];
+  TH2D* BarvsTOF = new TH2D("BarvsTOF","BarvsTOF",830,-30,200,45,0,45);
+  sprintf(buffChar,"%s_BarvsTOF",isotope_local);
+  BarvsTOF->SetTitle(buffChar);
+  dst_local->Draw("vandle_barNum:vandle_TOF>>BarvsTOF","","colz");
+  sprintf(BarvsTOF_char,"../%s_vandle_BarvsTOF.png",isotope_local);
+  c1->SaveAs(BarvsTOF_char);
+
+  char BarvsQDC_char[345];
+  TH2D* BarvsQDC = new TH2D("BarvsQDC","BarvsQDC",830,-30,400,45,0,45);
+  sprintf(buffChar,"%s_BarvsQDC",isotope_local);
+  BarvsQDC->SetTitle(buffChar);
+  dst_local->Draw("vandle_barNum:vandle_BarQDC>>BarvsQDC","","colz");
+  sprintf(BarvsQDC_char,"../%s_vandle_BarvsQDC.png",isotope_local);
+  c1->SaveAs(BarvsQDC_char);
+
+  char BarvsTDiff_char[345];
+  TH2D* BarvsTDiff = new TH2D("BarvsTDiff","BarvsTDiff",1000,-1000,1000,45,0,45);
+  sprintf(buffChar,"%s_BarvsTDiff",isotope_local);
+  dst_local->Draw("vandle_barNum:vandle_TDiff>>BarvsTDiff","","colz");
+  sprintf(BarvsTDiff_char,"../%s_vandle_BarvsTDiff.png",isotope_local);
+  c1->SaveAs(BarvsTDiff_char);
+  c1->SetLogz(0);
+
+  char BarvsTDiff_zoom_char[345];
+  TH2D* BarvsTDiff_zoom = new TH2D("BarvsTDiff_zoom","BarvsTDiff_zoom",800,-40,40,45,0,45);
+  sprintf(BarvsTDiff_zoom_char,"%s_BarvsTDiff_zoom",isotope_local);
+  dst_local->Draw("vandle_barNum:vandle_TDiff>>BarvsTDiff_zoom","","colz");
+  sprintf(BarvsTDiff_zoom_char,"../%s_vandle_BarvsTDiff_zoom.png",isotope_local);
+  c1->SaveAs(BarvsTDiff_zoom_char);
+
+  sprintf(buffChar,
+    "gm montage -mode concatenate -tile 3x2 %s %s %s %s %s %s ../%s_grid.png",
+    QDCvsTOF_char,
+    BarvsQDC_char,
+    BarvsTDiff_char,
+    NEUTRON_TOF_char,
+    BarvsTOF_char,
+    BarvsTDiff_zoom_char,
+    isotope_local);
+  system(buffChar);
+
+  sprintf(buffChar,
+    "rm %s %s %s %s %s %s",
+    QDCvsTOF_char,
+    NEUTRON_TOF_char,
+    BarvsTOF_char,
+    BarvsQDC_char,
+    BarvsTDiff_char,
+    BarvsTDiff_zoom_char);
+  system(buffChar);
+
 }
