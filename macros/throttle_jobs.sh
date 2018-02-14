@@ -4,8 +4,7 @@
 # for example: find /full/path/to/ornl2016/ldf/Rb/ -name *.ldf >> path_to_many_ldfs.txt
 # then one could run -->    ./throttle_jobs.sh -ldf_paths path_to_many_ldfs.txt -final_dest /path/to/final/dest/folder
 
-run_script=/home/jeremy/vandle/macros/run_ornl2016_Rb.sh
-final_dest=/SCRATCH/DScratch3/jeremy/utkscan_output/throttle_jobs_`date +%d%b%Y_%H%M_%S`
+run_script=/home/jeremy/vandle/macros/batchProcess_utkscan.sh
 
 array=( "$@" )
 arraylength=${#array[@]}
@@ -16,18 +15,24 @@ do
 	fi
   if [[ "${array[$i-1]}" = "-ldf_paths" ]]; then
     ldf_paths=${array[$i]}
+    tmp=`basename $ldf_paths .txt `
+    final_dest=/SCRATCH/DScratch3/jeremy/utkscan_output/${tmp}_`date +%d%b%Y_%H%M_%S`
+
 	fi
   if [[ "${array[$i-1]}" = "-final_dest" ]]; then
     final_dest=${array[$i]}
-    if [[ ! -d $final_dest ]]; then
-      mkdir -p $final_dest
-    fi
 	fi
 done
 
 if [[ ! -f $ldf_paths ]]; then
- echo "pass this script a single path to a file full of many paths of ldf files"
- exit
+  echo "pass this script a single path to a file full of many paths of ldf files"
+  echo "for example: find /full/path/to/ornl2016/ldf/Rb/ -name *.ldf >> path_to_many_ldfs.txt"
+  echo "then one could run -->  ./throttle_jobs.sh -ldf_paths path_to_many_ldfs.txt -final_dest /path/to/final/dest/folder"
+  exit
+fi
+
+if [[ ! -d $final_dest ]]; then
+  mkdir -p $final_dest
 fi
 
 nJobsToDo=`cat $ldf_paths | wc -l`
@@ -35,6 +40,7 @@ nJobsCompleted=0
 timeStarted=$SECONDS
 cat $ldf_paths | while read ldf
 do
+  echo $final_dest
   if [[  ! -f $ldf ]]; then
     echo "$ldf doesn't exist"
     continue
@@ -50,7 +56,7 @@ do
   	sleep $waittime
   	nLOCKS=`ls /home/jeremy/.locks/ |wc -l`
   done
-  echo "$run_script -i $ldf -c /SCRATCH/DRunScratch1/ornl2016/Rb/Config-rbTest.xml -b &"
+  echo "$run_script -i $ldf -c /SCRATCH/DRunScratch1/ornl2016/Rb/Config-rbTest.xml -b "
   $run_script -i $ldf -c /SCRATCH/DRunScratch1/ornl2016/Rb/Config-rbTest.xml -b -final_dest $final_dest &
   sleep .5
   ((++nJobsCompleted))
