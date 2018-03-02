@@ -1,0 +1,4032 @@
+
+
+*******************************************************************************
+Thu Feb  8 21:13:45 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [981.500 : 1041.50]
+        #datapoints = 55
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1032.69           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.606657
+
+initial set of free parameter values
+
+amp             = 358.699
+sigma           = 2.7
+mu              = 1011.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 114.315
+rel. change during last iteration : -1.33743e-06
+
+degrees of freedom    (FIT_NDF)                        : 52
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.48269
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.19836
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1373.41          +/- 56.89        (4.142%)
+sigma           = 11.0241          +/- 0.4127       (3.744%)
+mu              = 1001.19          +/- 0.515        (0.05144%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.168  1.000 
+mu             -0.122 -0.351  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:45 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [676.500 : 736.500]
+        #datapoints = 44
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 217.391           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.34608
+
+initial set of free parameter values
+
+amp             = 453.449
+sigma           = 2.7
+mu              = 706.5
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 110.778
+rel. change during last iteration : -7.87511e-06
+
+degrees of freedom    (FIT_NDF)                        : 41
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.64375
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.7019
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 286.274          +/- 27.81        (9.716%)
+sigma           = 2.48275          +/- 0.2154       (8.676%)
+mu              = 706.669          +/- 0.2482       (0.03512%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.002  1.000 
+mu             -0.001  0.028  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:45 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [1002.50 : 1062.50]
+        #datapoints = 58
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1010.54           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.682716
+
+initial set of free parameter values
+
+amp             = 392.538
+sigma           = 2.7
+mu              = 1032.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 129.736
+rel. change during last iteration : -6.04933e-07
+
+degrees of freedom    (FIT_NDF)                        : 55
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.53585
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.35884
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1364.35          +/- 61.73        (4.525%)
+sigma           = 11.6341          +/- 0.5114       (4.395%)
+mu              = 1019.83          +/- 0.6658       (0.06528%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.288  1.000 
+mu             -0.266 -0.563  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:45 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [671.500 : 731.500]
+        #datapoints = 46
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 265.154           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.42991
+
+initial set of free parameter values
+
+amp             = 500.824
+sigma           = 2.7
+mu              = 701.5
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 106.129
+rel. change during last iteration : -4.57708e-06
+
+degrees of freedom    (FIT_NDF)                        : 43
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.57103
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.46813
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 317.895          +/- 28.01        (8.812%)
+sigma           = 2.10028          +/- 0.1628       (7.75%)
+mu              = 701.79           +/- 0.188        (0.0268%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.001  1.000 
+mu             -0.000 -0.114  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:45 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 60
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1059.52           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.727502
+
+initial set of free parameter values
+
+amp             = 480.521
+sigma           = 2.7
+mu              = 1000.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 119.041
+rel. change during last iteration : -1.01117e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.44514
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.08844
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1346.65          +/- 53.25        (3.954%)
+sigma           = 10.966           +/- 0.3313       (3.021%)
+mu              = 1001.52          +/- 0.4465       (0.04458%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.040  1.000 
+mu             -0.001 -0.131  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:45 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [677.500 : 737.500]
+        #datapoints = 52
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 350.669           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.53951
+
+initial set of free parameter values
+
+amp             = 500.824
+sigma           = 2.7
+mu              = 707.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 128.823
+rel. change during last iteration : -5.13337e-06
+
+degrees of freedom    (FIT_NDF)                        : 49
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.62143
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.62905
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 310.178          +/- 28.56        (9.207%)
+sigma           = 2.32942          +/- 0.1805       (7.75%)
+mu              = 708.142          +/- 0.2182       (0.03082%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.049  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:45 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [992.500 : 1052.50]
+        #datapoints = 58
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1047.98           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.638301
+
+initial set of free parameter values
+
+amp             = 426.377
+sigma           = 2.7
+mu              = 1022.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 160.492
+rel. change during last iteration : -6.42326e-06
+
+degrees of freedom    (FIT_NDF)                        : 55
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.70823
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.91804
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1333.64          +/- 62.65        (4.698%)
+sigma           = 9.8687           +/- 0.3381       (3.426%)
+mu              = 1016.54          +/- 0.4762       (0.04685%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.039  1.000 
+mu             -0.019 -0.126  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:45 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [669.500 : 729.500]
+        #datapoints = 48
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 240.103           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.39641
+
+initial set of free parameter values
+
+amp             = 561.735
+sigma           = 2.7
+mu              = 699.5
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 107.654
+rel. change during last iteration : -6.63605e-06
+
+degrees of freedom    (FIT_NDF)                        : 45
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.54671
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.39231
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 353.424          +/- 29.18        (8.257%)
+sigma           = 2.2516           +/- 0.1722       (7.648%)
+mu              = 699.376          +/- 0.1918       (0.02743%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.033  1.000 
+mu             -0.015 -0.110  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:45 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [965.500 : 1025.50]
+        #datapoints = 61
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1125.82           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.558865
+
+initial set of free parameter values
+
+amp             = 379.002
+sigma           = 2.7
+mu              = 995.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 169.235
+rel. change during last iteration : -3.199e-06
+
+degrees of freedom    (FIT_NDF)                        : 58
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.70817
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.91784
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1450.42          +/- 67.15        (4.63%)
+sigma           = 11.4898          +/- 0.477        (4.151%)
+mu              = 986.181          +/- 0.5988       (0.06072%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.156  1.000 
+mu             -0.124 -0.364  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [684.500 : 744.500]
+        #datapoints = 47
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 340.975           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.61812
+
+initial set of free parameter values
+
+amp             = 521.128
+sigma           = 2.7
+mu              = 714.5
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 111.087
+rel. change during last iteration : -4.17133e-06
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.58893
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.5247
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 305.913          +/- 27.79        (9.085%)
+sigma           = 1.95659          +/- 0.1536       (7.849%)
+mu              = 714.553          +/- 0.1805       (0.02527%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.149  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [976.500 : 1036.50]
+        #datapoints = 55
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1076.19           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.647988
+
+initial set of free parameter values
+
+amp             = 439.913
+sigma           = 2.7
+mu              = 1006.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 100.99
+rel. change during last iteration : -6.01629e-06
+
+degrees of freedom    (FIT_NDF)                        : 52
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.3936
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.94212
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1493.18          +/- 54.59        (3.656%)
+sigma           = 10.8295          +/- 0.3309       (3.055%)
+mu              = 999.593          +/- 0.4224       (0.04226%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.094  1.000 
+mu             -0.045 -0.217  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [675.500 : 735.500]
+        #datapoints = 51
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 301.424           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.58575
+
+initial set of free parameter values
+
+amp             = 514.36
+sigma           = 2.7
+mu              = 705.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 129.89
+rel. change during last iteration : -5.80304e-06
+
+degrees of freedom    (FIT_NDF)                        : 48
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.645
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.70604
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 323.11           +/- 29.57        (9.152%)
+sigma           = 2.25174          +/- 0.1765       (7.841%)
+mu              = 705.828          +/- 0.2093       (0.02965%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.076  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [954.500 : 1014.50]
+        #datapoints = 61
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1199.67           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.672755
+
+initial set of free parameter values
+
+amp             = 466.985
+sigma           = 2.7
+mu              = 984.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 180.629
+rel. change during last iteration : -5.90369e-07
+
+degrees of freedom    (FIT_NDF)                        : 58
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.76474
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.1143
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1478             +/- 68.06        (4.605%)
+sigma           = 10.901           +/- 0.3694       (3.389%)
+mu              = 984.076          +/- 0.5134       (0.05217%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.033  1.000 
+mu             -0.002 -0.063  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [684.500 : 744.500]
+        #datapoints = 53
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 218.076           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.23499
+
+initial set of free parameter values
+
+amp             = 466.985
+sigma           = 2.7
+mu              = 714.5
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 141.368
+rel. change during last iteration : -6.67781e-06
+
+degrees of freedom    (FIT_NDF)                        : 50
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.68148
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.82737
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 353.631          +/- 31.62        (8.942%)
+sigma           = 2.10109          +/- 0.1564       (7.443%)
+mu              = 714.578          +/- 0.192        (0.02687%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.056  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 60
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1156.86           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.610919
+
+initial set of free parameter values
+
+amp             = 419.61
+sigma           = 2.7
+mu              = 1000.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 147.703
+rel. change during last iteration : -2.27323e-09
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.60975
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.59128
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1467.16          +/- 61.83        (4.215%)
+sigma           = 10.5667          +/- 0.3362       (3.181%)
+mu              = 1001.96          +/- 0.4547       (0.04538%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.031  1.000 
+mu              0.004 -0.069  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [677.500 : 737.500]
+        #datapoints = 50
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 784.367           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.78324
+
+initial set of free parameter values
+
+amp             = 595.575
+sigma           = 2.7
+mu              = 707.5
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 125.402
+rel. change during last iteration : -4.66767e-06
+
+degrees of freedom    (FIT_NDF)                        : 47
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.63344
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.66813
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 339.625          +/- 30.1         (8.864%)
+sigma           = 2.0247           +/- 0.144        (7.114%)
+mu              = 708.5            +/- 0.1841       (0.02598%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.001  1.000 
+mu             -0.000 -0.041  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 59
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1127.49           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.816781
+
+initial set of free parameter values
+
+amp             = 561.735
+sigma           = 2.7
+mu              = 1000.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 171.812
+rel. change during last iteration : -1.13421e-06
+
+degrees of freedom    (FIT_NDF)                        : 56
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.75159
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.06806
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1445.56          +/- 67.43        (4.664%)
+sigma           = 11.6028          +/- 0.436        (3.758%)
+mu              = 995.831          +/- 0.5713       (0.05737%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.086  1.000 
+mu             -0.031 -0.132  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [682.500 : 742.500]
+        #datapoints = 49
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 267.299           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.50067
+
+initial set of free parameter values
+
+amp             = 541.432
+sigma           = 2.7
+mu              = 712.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 110.475
+rel. change during last iteration : -5.87428e-06
+
+degrees of freedom    (FIT_NDF)                        : 46
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.54972
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.40163
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 340.707          +/- 28.61        (8.398%)
+sigma           = 2.24022          +/- 0.1631       (7.278%)
+mu              = 712.155          +/- 0.1907       (0.02677%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.005  1.000 
+mu             -0.002 -0.155  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [994.500 : 1054.50]
+        #datapoints = 57
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1172.57           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.626924
+
+initial set of free parameter values
+
+amp             = 426.377
+sigma           = 2.7
+mu              = 1024.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 114.855
+rel. change during last iteration : -1.87374e-06
+
+degrees of freedom    (FIT_NDF)                        : 54
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.4584
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.12694
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1554.16          +/- 58.51        (3.765%)
+sigma           = 11.104           +/- 0.3433       (3.091%)
+mu              = 1017.07          +/- 0.4539       (0.04462%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.108  1.000 
+mu             -0.063 -0.273  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [674.500 : 734.500]
+        #datapoints = 51
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 339.801           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.34539
+
+initial set of free parameter values
+
+amp             = 527.896
+sigma           = 2.7
+mu              = 704.5
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 136.377
+rel. change during last iteration : -8.5719e-06
+
+degrees of freedom    (FIT_NDF)                        : 48
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.68558
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.84119
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 355.624          +/- 31.79        (8.938%)
+sigma           = 2.12529          +/- 0.1625       (7.648%)
+mu              = 703.451          +/- 0.1931       (0.02746%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.091  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 61
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1282.89           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.705038
+
+initial set of free parameter values
+
+amp             = 480.521
+sigma           = 2.7
+mu              = 1000.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 193.132
+rel. change during last iteration : -7.51667e-06
+
+degrees of freedom    (FIT_NDF)                        : 58
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.82479
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.32987
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1534.53          +/- 71.91        (4.686%)
+sigma           = 11.4789          +/- 0.4111       (3.582%)
+mu              = 998.408          +/- 0.5609       (0.05618%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.053  1.000 
+mu             -0.019 -0.186  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [683.500 : 743.500]
+        #datapoints = 53
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 288.392           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.30234
+
+initial set of free parameter values
+
+amp             = 527.896
+sigma           = 2.7
+mu              = 713.5
+
+After 15 iterations the fit converged.
+final sum of squares of residuals : 135.183
+rel. change during last iteration : -8.87628e-06
+
+degrees of freedom    (FIT_NDF)                        : 50
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.64428
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.70366
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 320.817          +/- 29.45        (9.18%)
+sigma           = 2.21246          +/- 0.188        (8.498%)
+mu              = 713.159          +/- 0.2063       (0.02893%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.001  1.000 
+mu             -0.000 -0.108  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [979.500 : 1039.50]
+        #datapoints = 57
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1305.16           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.626112
+
+initial set of free parameter values
+
+amp             = 426.377
+sigma           = 2.7
+mu              = 1009.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 206.436
+rel. change during last iteration : -2.09272e-06
+
+degrees of freedom    (FIT_NDF)                        : 54
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.95522
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.82288
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1565.81          +/- 77.94        (4.977%)
+sigma           = 10.3482          +/- 0.3661       (3.538%)
+mu              = 1015.87          +/- 0.5359       (0.05276%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.052  1.000 
+mu              0.028  0.007  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [674.500 : 734.500]
+        #datapoints = 45
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 648.438           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.03186
+
+initial set of free parameter values
+
+amp             = 636.182
+sigma           = 2.7
+mu              = 704.5
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 119.574
+rel. change during last iteration : -5.54231e-06
+
+degrees of freedom    (FIT_NDF)                        : 42
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.68731
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.847
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 343.425          +/- 31.27        (9.105%)
+sigma           = 1.58475          +/- 0.119        (7.511%)
+mu              = 704.307          +/- 0.1483       (0.02105%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.124  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [954.500 : 1014.50]
+        #datapoints = 55
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1249.61           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.597832
+
+initial set of free parameter values
+
+amp             = 412.842
+sigma           = 2.7
+mu              = 984.5
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 175.517
+rel. change during last iteration : -9.0388e-08
+
+degrees of freedom    (FIT_NDF)                        : 52
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.83721
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.37534
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1568.7           +/- 73.21        (4.667%)
+sigma           = 10.2984          +/- 0.3516       (3.414%)
+mu              = 984.261          +/- 0.5009       (0.05089%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.049  1.000 
+mu             -0.003 -0.184  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [678.500 : 738.500]
+        #datapoints = 50
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 589.81            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.03059
+
+initial set of free parameter values
+
+amp             = 642.95
+sigma           = 2.7
+mu              = 708.5
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 112.787
+rel. change during last iteration : -7.42678e-06
+
+degrees of freedom    (FIT_NDF)                        : 47
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.54911
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.39973
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 345.259          +/- 28.79        (8.338%)
+sigma           = 1.7784           +/- 0.1233       (6.932%)
+mu              = 708.39           +/- 0.1521       (0.02148%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.001  1.000 
+mu             -0.001 -0.093  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 58
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1284.48           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.724157
+
+initial set of free parameter values
+
+amp             = 507.592
+sigma           = 2.7
+mu              = 1000.5
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 223.555
+rel. change during last iteration : -1.05501e-09
+
+degrees of freedom    (FIT_NDF)                        : 55
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.0161
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.06464
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1564.68          +/- 80           (5.113%)
+sigma           = 10.3906          +/- 0.3747       (3.606%)
+mu              = 1000.66          +/- 0.5459       (0.05455%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.032  1.000 
+mu             -0.005 -0.164  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:46 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [667.500 : 727.500]
+        #datapoints = 52
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 731.606           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.90497
+
+initial set of free parameter values
+
+amp             = 622.646
+sigma           = 2.7
+mu              = 697.5
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 130.156
+rel. change during last iteration : -3.19399e-06
+
+degrees of freedom    (FIT_NDF)                        : 49
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.6298
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.65624
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 338.844          +/- 30           (8.854%)
+sigma           = 1.5236           +/- 0.1197       (7.858%)
+mu              = 697.769          +/- 0.1378       (0.01975%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.254  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 49
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1079.4            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.862796
+
+initial set of free parameter values
+
+amp             = 554.968
+sigma           = 2.7
+mu              = 1000.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 203.286
+rel. change during last iteration : -6.5847e-08
+
+degrees of freedom    (FIT_NDF)                        : 46
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.1022
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.41925
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1495.96          +/- 83.81        (5.602%)
+sigma           = 10.4556          +/- 0.5241       (5.013%)
+mu              = 990.424          +/- 0.6718       (0.06783%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.162  1.000 
+mu             -0.097 -0.390  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [677.500 : 737.500]
+        #datapoints = 46
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 409.327           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.69949
+
+initial set of free parameter values
+
+amp             = 575.271
+sigma           = 2.7
+mu              = 707.5
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 123.266
+rel. change during last iteration : -7.86083e-06
+
+degrees of freedom    (FIT_NDF)                        : 43
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.69312
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.86665
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 333.742          +/- 30.93        (9.268%)
+sigma           = 1.78769          +/- 0.1414       (7.908%)
+mu              = 707.122          +/- 0.1687       (0.02386%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.161  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 59
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1157.44           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.707737
+
+initial set of free parameter values
+
+amp             = 487.289
+sigma           = 2.7
+mu              = 1000.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 169.36
+rel. change during last iteration : -9.24738e-06
+
+degrees of freedom    (FIT_NDF)                        : 56
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.73905
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.02429
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1454.31          +/- 66.59        (4.579%)
+sigma           = 9.97634          +/- 0.3262       (3.27%)
+mu              = 1005.98          +/- 0.4684       (0.04657%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.034  1.000 
+mu              0.015 -0.091  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [671.500 : 731.500]
+        #datapoints = 49
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 397.726           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.77335
+
+initial set of free parameter values
+
+amp             = 521.128
+sigma           = 2.7
+mu              = 701.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 97.6182
+rel. change during last iteration : -2.85194e-06
+
+degrees of freedom    (FIT_NDF)                        : 46
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.45675
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.12213
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 331.382          +/- 26.52        (8.002%)
+sigma           = 1.86919          +/- 0.1225       (6.555%)
+mu              = 701.832          +/- 0.1511       (0.02152%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu              0.000 -0.227  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 58
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1177.53           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.817434
+
+initial set of free parameter values
+
+amp             = 568.503
+sigma           = 2.7
+mu              = 1000.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 208.798
+rel. change during last iteration : -7.36791e-06
+
+degrees of freedom    (FIT_NDF)                        : 55
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.94842
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.79633
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1461.74          +/- 74.75        (5.114%)
+sigma           = 10.0784          +/- 0.3532       (3.505%)
+mu              = 999.739          +/- 0.5279       (0.0528%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.030  1.000 
+mu             -0.003 -0.135  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [679.500 : 739.500]
+        #datapoints = 43
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 826.661           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.30029
+
+initial set of free parameter values
+
+amp             = 764.772
+sigma           = 2.7
+mu              = 709.5
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 103.671
+rel. change during last iteration : -9.57658e-06
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.6099
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.59177
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 385.775          +/- 31.64        (8.202%)
+sigma           = 1.64398          +/- 0.1173       (7.137%)
+mu              = 709.876          +/- 0.139        (0.01959%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.010  1.000 
+mu             -0.004 -0.143  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 53
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1227.04           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.936791
+
+initial set of free parameter values
+
+amp             = 439.913
+sigma           = 2.7
+mu              = 1000.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 146.261
+rel. change during last iteration : -2.20037e-06
+
+degrees of freedom    (FIT_NDF)                        : 50
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.71033
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.92522
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1562.33          +/- 82.1         (5.255%)
+sigma           = 11.3889          +/- 0.5678       (4.986%)
+mu              = 1016.55          +/- 0.8366       (0.0823%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.439  1.000 
+mu              0.446  0.621  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [672.500 : 732.500]
+        #datapoints = 47
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 560.24            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.01132
+
+initial set of free parameter values
+
+amp             = 642.95
+sigma           = 2.7
+mu              = 702.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 101.718
+rel. change during last iteration : -4.33672e-06
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.52045
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.31177
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 356.282          +/- 28.7         (8.055%)
+sigma           = 1.80687          +/- 0.1217       (6.736%)
+mu              = 702.789          +/- 0.1476       (0.021%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.179  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 58
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1257.14           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.891373
+
+initial set of free parameter values
+
+amp             = 602.343
+sigma           = 2.7
+mu              = 1000.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 198.986
+rel. change during last iteration : -5.90416e-06
+
+degrees of freedom    (FIT_NDF)                        : 55
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.90208
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.61793
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1501.4           +/- 74.19        (4.941%)
+sigma           = 10.9988          +/- 0.4033       (3.667%)
+mu              = 1001.55          +/- 0.5637       (0.05629%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.053  1.000 
+mu             -0.009 -0.101  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [680.500 : 740.500]
+        #datapoints = 44
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 568.952           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.18433
+
+initial set of free parameter values
+
+amp             = 703.861
+sigma           = 2.7
+mu              = 710.5
+
+After 13 iterations the fit converged.
+final sum of squares of residuals : 109.685
+rel. change during last iteration : -8.22325e-06
+
+degrees of freedom    (FIT_NDF)                        : 41
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.63562
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.67525
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 358.314          +/- 30.96        (8.641%)
+sigma           = 1.9224           +/- 0.1471       (7.654%)
+mu              = 710.586          +/- 0.1697       (0.02389%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.097  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [986.500 : 1046.50]
+        #datapoints = 57
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1081.83           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.796142
+
+initial set of free parameter values
+
+amp             = 466.985
+sigma           = 2.7
+mu              = 1016.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 184.796
+rel. change during last iteration : -3.80033e-07
+
+degrees of freedom    (FIT_NDF)                        : 54
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.8499
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.42214
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1413.25          +/- 75           (5.307%)
+sigma           = 10.7589          +/- 0.5395       (5.015%)
+mu              = 1003.01          +/- 0.7438       (0.07415%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.273  1.000 
+mu             -0.257 -0.607  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [681.500 : 741.500]
+        #datapoints = 47
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 438.242           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.80806
+
+initial set of free parameter values
+
+amp             = 575.271
+sigma           = 2.7
+mu              = 711.5
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 106.479
+rel. change during last iteration : -7.47134e-06
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.55563
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.41998
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 355.52           +/- 29.33        (8.25%)
+sigma           = 1.93901          +/- 0.1357       (6.997%)
+mu              = 711.978          +/- 0.1634       (0.02295%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.087  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 57
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1119.05           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.754748
+
+initial set of free parameter values
+
+amp             = 500.824
+sigma           = 2.7
+mu              = 1000.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 173.065
+rel. change during last iteration : -9.33372e-06
+
+degrees of freedom    (FIT_NDF)                        : 54
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.79022
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.2049
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1396.38          +/- 67.32        (4.821%)
+sigma           = 10.4777          +/- 0.3623       (3.458%)
+mu              = 999.004          +/- 0.5243       (0.05248%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.048  1.000 
+mu             -0.008 -0.152  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [680.500 : 740.500]
+        #datapoints = 51
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 432.203           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.95708
+
+initial set of free parameter values
+
+amp             = 568.503
+sigma           = 2.7
+mu              = 710.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 85.9125
+rel. change during last iteration : -7.24233e-06
+
+degrees of freedom    (FIT_NDF)                        : 48
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.33785
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.78984
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 367.087          +/- 25.63        (6.983%)
+sigma           = 1.92229          +/- 0.105        (5.463%)
+mu              = 709.97           +/- 0.1356       (0.0191%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.150  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [986.500 : 1046.50]
+        #datapoints = 58
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1131.86           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.747475
+
+initial set of free parameter values
+
+amp             = 494.056
+sigma           = 2.7
+mu              = 1016.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 152.434
+rel. change during last iteration : -6.57622e-06
+
+degrees of freedom    (FIT_NDF)                        : 55
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.66479
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.77153
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1421.24          +/- 63.18        (4.446%)
+sigma           = 10.9853          +/- 0.3622       (3.297%)
+mu              = 1018.49          +/- 0.5066       (0.04974%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.053  1.000 
+mu              0.008 -0.061  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [671.500 : 731.500]
+        #datapoints = 47
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 760.454           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.92138
+
+initial set of free parameter values
+
+amp             = 670.022
+sigma           = 2.7
+mu              = 701.5
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 109.353
+rel. change during last iteration : -9.99429e-06
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.57649
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.48531
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 360.684          +/- 29.94        (8.301%)
+sigma           = 1.59173          +/- 0.1079       (6.779%)
+mu              = 701.77           +/- 0.1352       (0.01926%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.001  1.000 
+mu             -0.000 -0.147  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 56
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1070.54           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.694799
+
+initial set of free parameter values
+
+amp             = 426.377
+sigma           = 2.7
+mu              = 1000.5
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 189.706
+rel. change during last iteration : -2.48602e-07
+
+degrees of freedom    (FIT_NDF)                        : 53
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.89192
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.57935
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1292.77          +/- 68.63        (5.309%)
+sigma           = 11.0484          +/- 0.437        (3.956%)
+mu              = 999.371          +/- 0.6144       (0.06148%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.065  1.000 
+mu              0.002 -0.127  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [679.500 : 739.500]
+        #datapoints = 44
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 528.755           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.02754
+
+initial set of free parameter values
+
+amp             = 588.807
+sigma           = 2.7
+mu              = 709.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 77.8158
+rel. change during last iteration : -5.26021e-06
+
+degrees of freedom    (FIT_NDF)                        : 41
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.37766
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.89795
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 331.909          +/- 25.13        (7.571%)
+sigma           = 1.75959          +/- 0.1118       (6.351%)
+mu              = 709.863          +/- 0.1365       (0.01923%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.016  1.000 
+mu             -0.007 -0.179  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:47 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 58
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1035.49           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.667281
+
+initial set of free parameter values
+
+amp             = 426.377
+sigma           = 2.7
+mu              = 1000.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 219.187
+rel. change during last iteration : -6.51798e-06
+
+degrees of freedom    (FIT_NDF)                        : 55
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.9963
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.98523
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1242.47          +/- 70.59        (5.681%)
+sigma           = 10.1492          +/- 0.4012       (3.953%)
+mu              = 1001.34          +/- 0.5907       (0.05899%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.031  1.000 
+mu             -0.007 -0.140  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [680.500 : 740.500]
+        #datapoints = 48
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 841.053           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.52854
+
+initial set of free parameter values
+
+amp             = 764.772
+sigma           = 2.7
+mu              = 710.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 101.072
+rel. change during last iteration : -4.0182e-06
+
+degrees of freedom    (FIT_NDF)                        : 45
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.49868
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.24604
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 389.928          +/- 29.59        (7.59%)
+sigma           = 1.78985          +/- 0.1109       (6.197%)
+mu              = 710.551          +/- 0.138        (0.01942%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.154  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 56
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1126.14           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.853093
+
+initial set of free parameter values
+
+amp             = 514.36
+sigma           = 2.7
+mu              = 1000.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 197.196
+rel. change during last iteration : -1.56699e-06
+
+degrees of freedom    (FIT_NDF)                        : 53
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.92891
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.72068
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1208.17          +/- 67.66        (5.601%)
+sigma           = 11.0363          +/- 0.4746       (4.301%)
+mu              = 999.425          +/- 0.6473       (0.06477%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.069  1.000 
+mu             -0.006 -0.113  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [685.500 : 745.500]
+        #datapoints = 47
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 761.058           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.44792
+
+initial set of free parameter values
+
+amp             = 615.879
+sigma           = 2.7
+mu              = 715.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 99.9943
+rel. change during last iteration : -7.22185e-06
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.50751
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.2726
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 326.038          +/- 27.22        (8.349%)
+sigma           = 1.76456          +/- 0.1156       (6.551%)
+mu              = 715.436          +/- 0.1506       (0.02106%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.001  1.000 
+mu             -0.000 -0.107  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 51
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1265.19           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.0198
+
+initial set of free parameter values
+
+amp             = 372.234
+sigma           = 2.7
+mu              = 1000.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 114.635
+rel. change during last iteration : -4.42659e-06
+
+degrees of freedom    (FIT_NDF)                        : 48
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.54539
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.38823
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1319.51          +/- 74.64        (5.657%)
+sigma           = 11.7806          +/- 0.6223       (5.282%)
+mu              = 1017.9           +/- 0.9604       (0.09435%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.524  1.000 
+mu              0.555  0.685  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [677.500 : 737.500]
+        #datapoints = 47
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 387.673           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.79715
+
+initial set of free parameter values
+
+amp             = 521.128
+sigma           = 2.7
+mu              = 707.5
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 101.272
+rel. change during last iteration : -6.50402e-06
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.51711
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.30163
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 329.728          +/- 27.55        (8.355%)
+sigma           = 1.76337          +/- 0.1139       (6.461%)
+mu              = 707.24           +/- 0.1521       (0.0215%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.047  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [954.500 : 1014.50]
+        #datapoints = 56
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 923.82            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.618559
+
+initial set of free parameter values
+
+amp             = 365.466
+sigma           = 2.7
+mu              = 984.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 155.308
+rel. change during last iteration : -6.61726e-06
+
+degrees of freedom    (FIT_NDF)                        : 53
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.71182
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.93034
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1144.25          +/- 58.43        (5.107%)
+sigma           = 10.5172          +/- 0.3899       (3.708%)
+mu              = 985.451          +/- 0.5597       (0.05679%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.057  1.000 
+mu              0.011 -0.096  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [681.500 : 741.500]
+        #datapoints = 42
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 798.344           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.47642
+
+initial set of free parameter values
+
+amp             = 663.254
+sigma           = 2.7
+mu              = 711.5
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 93.334
+rel. change during last iteration : -9.01278e-06
+
+degrees of freedom    (FIT_NDF)                        : 39
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.54699
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.39318
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 343.669          +/- 28.68        (8.345%)
+sigma           = 1.65489          +/- 0.1115       (6.739%)
+mu              = 710.95           +/- 0.1421       (0.01999%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.000  1.000 
+mu             -0.000 -0.093  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 59
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1095.91           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.650201
+
+initial set of free parameter values
+
+amp             = 412.842
+sigma           = 2.7
+mu              = 1000.5
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 187.228
+rel. change during last iteration : -1.27731e-07
+
+degrees of freedom    (FIT_NDF)                        : 56
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.82849
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.34336
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1319.08          +/- 66.87        (5.069%)
+sigma           = 11.0494          +/- 0.4045       (3.661%)
+mu              = 1000.02          +/- 0.5807       (0.05807%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.052  1.000 
+mu             -0.016 -0.110  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [665.500 : 725.500]
+        #datapoints = 50
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 588.32            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.54916
+
+initial set of free parameter values
+
+amp             = 588.807
+sigma           = 2.7
+mu              = 695.5
+
+After 21 iterations the fit converged.
+final sum of squares of residuals : 137
+rel. change during last iteration : -6.969e-06
+
+degrees of freedom    (FIT_NDF)                        : 47
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.7073
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.91488
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 324.08           +/- 30.74        (9.485%)
+sigma           = 1.80312          +/- 0.1565       (8.682%)
+mu              = 696.147          +/- 0.176        (0.02528%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.002  1.000 
+mu             -0.001 -0.089  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 57
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 972.111           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.639405
+
+initial set of free parameter values
+
+amp             = 399.306
+sigma           = 2.7
+mu              = 1000.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 137.47
+rel. change during last iteration : -5.95083e-06
+
+degrees of freedom    (FIT_NDF)                        : 54
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.59554
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.54575
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1256.37          +/- 56.99        (4.536%)
+sigma           = 10.7161          +/- 0.3618       (3.376%)
+mu              = 1001.81          +/- 0.5054       (0.05044%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.057  1.000 
+mu              0.013 -0.056  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [687.500 : 747.500]
+        #datapoints = 47
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 435.161           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.00023
+
+initial set of free parameter values
+
+amp             = 568.503
+sigma           = 2.7
+mu              = 717.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 87.8717
+rel. change during last iteration : -9.43586e-06
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.41318
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.99708
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 340.14           +/- 26.06        (7.663%)
+sigma           = 1.82354          +/- 0.1104       (6.054%)
+mu              = 717.124          +/- 0.1428       (0.01991%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.000  1.000 
+mu             -0.000 -0.099  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [986.500 : 1046.50]
+        #datapoints = 57
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 984.586           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.675872
+
+initial set of free parameter values
+
+amp             = 439.913
+sigma           = 2.7
+mu              = 1016.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 152.914
+rel. change during last iteration : -3.49621e-06
+
+degrees of freedom    (FIT_NDF)                        : 54
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.68278
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.83175
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1283.07          +/- 60.83        (4.741%)
+sigma           = 10.5175          +/- 0.3759       (3.574%)
+mu              = 1010.21          +/- 0.5292       (0.05239%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.069  1.000 
+mu             -0.034 -0.248  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [679.500 : 739.500]
+        #datapoints = 49
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 878.463           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.27309
+
+initial set of free parameter values
+
+amp             = 649.718
+sigma           = 2.7
+mu              = 709.5
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 97.6691
+rel. change during last iteration : -4.17693e-06
+
+degrees of freedom    (FIT_NDF)                        : 46
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.45713
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.12324
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 344.331          +/- 27.04        (7.853%)
+sigma           = 1.58407          +/- 0.09982      (6.301%)
+mu              = 709.611          +/- 0.127        (0.01789%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.154  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 57
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 971.738           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.64125
+
+initial set of free parameter values
+
+amp             = 399.306
+sigma           = 2.7
+mu              = 1000.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 166.055
+rel. change during last iteration : -2.53152e-06
+
+degrees of freedom    (FIT_NDF)                        : 54
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.75359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.07509
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1215.98          +/- 61.4         (5.049%)
+sigma           = 10.448           +/- 0.3814       (3.65%)
+mu              = 998.127          +/- 0.5447       (0.05458%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.039  1.000 
+mu             -0.005 -0.167  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [680.500 : 740.500]
+        #datapoints = 48
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 749.625           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.82145
+
+initial set of free parameter values
+
+amp             = 575.271
+sigma           = 2.7
+mu              = 710.5
+
+After 23 iterations the fit converged.
+final sum of squares of residuals : 127.66
+rel. change during last iteration : -7.92114e-06
+
+degrees of freedom    (FIT_NDF)                        : 45
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.68431
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.8369
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 300.346          +/- 29.19        (9.719%)
+sigma           = 2.09392          +/- 0.18         (8.598%)
+mu              = 711.449          +/- 0.2121       (0.02982%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.000  1.000 
+mu             -0.000  0.043  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [986.500 : 1046.50]
+        #datapoints = 59
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 958.354           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.669122
+
+initial set of free parameter values
+
+amp             = 439.913
+sigma           = 2.7
+mu              = 1016.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 125.332
+rel. change during last iteration : -6.99356e-06
+
+degrees of freedom    (FIT_NDF)                        : 56
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.49602
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.23808
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1290.19          +/- 53.99        (4.184%)
+sigma           = 10.8172          +/- 0.3382       (3.127%)
+mu              = 1016.45          +/- 0.466        (0.04584%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.043  1.000 
+mu             -0.001 -0.075  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [675.500 : 735.500]
+        #datapoints = 50
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 127.183           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.09455
+
+initial set of free parameter values
+
+amp             = 399.306
+sigma           = 2.7
+mu              = 705.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 94.8078
+rel. change during last iteration : -5.89666e-06
+
+degrees of freedom    (FIT_NDF)                        : 47
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.42028
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.01719
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 310.24           +/- 25.02        (8.064%)
+sigma           = 2.38444          +/- 0.1602       (6.719%)
+mu              = 705.408          +/- 0.1945       (0.02758%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.001  1.000 
+mu             -0.001 -0.102  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:48 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [963.500 : 1023.50]
+        #datapoints = 60
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1023.8            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.633131
+
+initial set of free parameter values
+
+amp             = 412.842
+sigma           = 2.7
+mu              = 993.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 118.045
+rel. change during last iteration : -2.08925e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.43908
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.07096
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1353.45          +/- 53.78        (3.973%)
+sigma           = 11.0068          +/- 0.368        (3.344%)
+mu              = 986.218          +/- 0.4669       (0.04734%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.098  1.000 
+mu             -0.053 -0.210  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [671.500 : 731.500]
+        #datapoints = 50
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 229.93            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.46716
+
+initial set of free parameter values
+
+amp             = 500.824
+sigma           = 2.7
+mu              = 701.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 91.4329
+rel. change during last iteration : -2.5905e-06
+
+degrees of freedom    (FIT_NDF)                        : 47
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.39477
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.94538
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 345.567          +/- 25.93        (7.503%)
+sigma           = 2.08647          +/- 0.1297       (6.215%)
+mu              = 701.767          +/- 0.1582       (0.02255%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.148  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [986.500 : 1046.50]
+        #datapoints = 61
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1007.54           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.707372
+
+initial set of free parameter values
+
+amp             = 480.521
+sigma           = 2.7
+mu              = 1016.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 131.437
+rel. change during last iteration : -3.95611e-09
+
+degrees of freedom    (FIT_NDF)                        : 58
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.50537
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.26615
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1313.26          +/- 54.72        (4.167%)
+sigma           = 10.892           +/- 0.3399       (3.121%)
+mu              = 1016.66          +/- 0.4648       (0.04572%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.033  1.000 
+mu             -0.001 -0.116  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [674.500 : 734.500]
+        #datapoints = 46
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 416.828           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.80561
+
+initial set of free parameter values
+
+amp             = 534.664
+sigma           = 2.7
+mu              = 704.5
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 120.571
+rel. change during last iteration : -6.98944e-06
+
+degrees of freedom    (FIT_NDF)                        : 43
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.67451
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.80399
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 296.43           +/- 28.83        (9.726%)
+sigma           = 1.88897          +/- 0.1487       (7.872%)
+mu              = 704.007          +/- 0.1897       (0.02695%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.028  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 61
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1063.68           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.633774
+
+initial set of free parameter values
+
+amp             = 412.842
+sigma           = 2.7
+mu              = 1000.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 96.554
+rel. change during last iteration : -1.26827e-06
+
+degrees of freedom    (FIT_NDF)                        : 58
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.29024
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.66472
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1374.43          +/- 48.08        (3.498%)
+sigma           = 11.2033          +/- 0.3005       (2.682%)
+mu              = 1003.15          +/- 0.4043       (0.0403%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.046  1.000 
+mu              0.015 -0.025  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [680.500 : 740.500]
+        #datapoints = 51
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 233.026           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.32568
+
+initial set of free parameter values
+
+amp             = 500.824
+sigma           = 2.7
+mu              = 710.5
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 124.693
+rel. change during last iteration : -9.38338e-06
+
+degrees of freedom    (FIT_NDF)                        : 48
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.61176
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.59778
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 331.421          +/- 29.35        (8.855%)
+sigma           = 2.20014          +/- 0.171        (7.774%)
+mu              = 710.283          +/- 0.1985       (0.02794%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.003  1.000 
+mu             -0.001 -0.081  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [994.500 : 1054.50]
+        #datapoints = 57
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1021.57           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.590871
+
+initial set of free parameter values
+
+amp             = 351.931
+sigma           = 2.7
+mu              = 1024.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 146.5
+rel. change during last iteration : -4.0006e-06
+
+degrees of freedom    (FIT_NDF)                        : 54
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.64711
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.71296
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1333.94          +/- 64.04        (4.801%)
+sigma           = 11.6361          +/- 0.514        (4.417%)
+mu              = 1013.03          +/- 0.6785       (0.06698%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.240  1.000 
+mu             -0.205 -0.491  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [672.500 : 732.500]
+        #datapoints = 49
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 280.952           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.14569
+
+initial set of free parameter values
+
+amp             = 446.681
+sigma           = 2.7
+mu              = 702.5
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 123.731
+rel. change during last iteration : -6.82893e-06
+
+degrees of freedom    (FIT_NDF)                        : 46
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.64006
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.68979
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 326.269          +/- 29.62        (9.08%)
+sigma           = 2.2316           +/- 0.1778       (7.968%)
+mu              = 701.358          +/- 0.2053       (0.02927%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.001  1.000 
+mu             -0.000 -0.112  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [973.500 : 1033.50]
+        #datapoints = 60
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 947.757           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.557498
+
+initial set of free parameter values
+
+amp             = 358.699
+sigma           = 2.7
+mu              = 1003.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 116.055
+rel. change during last iteration : -1.36937e-07
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.42691
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.03606
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1239.28          +/- 50.55        (4.079%)
+sigma           = 11.188           +/- 0.3714       (3.319%)
+mu              = 1000.47          +/- 0.4742       (0.0474%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.056  1.000 
+mu             -0.019 -0.153  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [680.500 : 740.500]
+        #datapoints = 45
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 188.2             delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.26859
+
+initial set of free parameter values
+
+amp             = 453.449
+sigma           = 2.7
+mu              = 710.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 112.345
+rel. change during last iteration : -5.49392e-06
+
+degrees of freedom    (FIT_NDF)                        : 42
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.63551
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.67488
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 315.655          +/- 29.06        (9.205%)
+sigma           = 2.57071          +/- 0.2098       (8.16%)
+mu              = 710.875          +/- 0.2393       (0.03366%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.086  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [970.500 : 1030.50]
+        #datapoints = 58
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 966.704           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.718298
+
+initial set of free parameter values
+
+amp             = 453.449
+sigma           = 2.7
+mu              = 1000.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 144.557
+rel. change during last iteration : -8.96711e-07
+
+degrees of freedom    (FIT_NDF)                        : 55
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.62121
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.62831
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1268.36          +/- 58.86        (4.64%)
+sigma           = 11.3904          +/- 0.4501       (3.952%)
+mu              = 993.476          +/- 0.5697       (0.05735%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.115  1.000 
+mu             -0.058 -0.216  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [680.500 : 740.500]
+        #datapoints = 43
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 304.804           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.47364
+
+initial set of free parameter values
+
+amp             = 473.753
+sigma           = 2.7
+mu              = 710.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 91.4724
+rel. change during last iteration : -7.76342e-06
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.51222
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.28681
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 316.837          +/- 26.93        (8.5%)
+sigma           = 1.99253          +/- 0.1427       (7.161%)
+mu              = 711.095          +/- 0.1721       (0.02421%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.009  1.000 
+mu             -0.004 -0.188  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [972.500 : 1032.50]
+        #datapoints = 51
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 942.506           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.883126
+
+initial set of free parameter values
+
+amp             = 419.61
+sigma           = 2.7
+mu              = 1002.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 145.053
+rel. change during last iteration : -6.0028e-06
+
+degrees of freedom    (FIT_NDF)                        : 48
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.73837
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.02194
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1231.17          +/- 65.85        (5.349%)
+sigma           = 11.0781          +/- 0.6196       (5.593%)
+mu              = 990.317          +/- 0.7497       (0.07571%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.288  1.000 
+mu             -0.224 -0.547  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [672.500 : 732.500]
+        #datapoints = 43
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 517.933           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.95216
+
+initial set of free parameter values
+
+amp             = 494.056
+sigma           = 2.7
+mu              = 702.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 100.708
+rel. change during last iteration : -6.01671e-06
+
+degrees of freedom    (FIT_NDF)                        : 40
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.58673
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.5177
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 297.292          +/- 27.36        (9.203%)
+sigma           = 1.67168          +/- 0.1286       (7.69%)
+mu              = 702.793          +/- 0.1564       (0.02226%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.187  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [986.500 : 1046.50]
+        #datapoints = 60
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 971.969           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.536124
+
+initial set of free parameter values
+
+amp             = 345.163
+sigma           = 2.7
+mu              = 1016.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 106.15
+rel. change during last iteration : -2.48789e-06
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.36466
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86229
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1272.07          +/- 48.9         (3.844%)
+sigma           = 11.0698          +/- 0.3254       (2.939%)
+mu              = 1017.69          +/- 0.4385       (0.04309%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.044  1.000 
+mu              0.001 -0.107  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [671.500 : 731.500]
+        #datapoints = 47
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 215.917           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.32508
+
+initial set of free parameter values
+
+amp             = 473.753
+sigma           = 2.7
+mu              = 701.5
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 109.845
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.58002
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.49647
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 321.16           +/- 28.32        (8.817%)
+sigma           = 2.67578          +/- 0.2037       (7.612%)
+mu              = 702.079          +/- 0.2382       (0.03393%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.000  1.000 
+mu              0.000 -0.083  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [954.500 : 1014.50]
+        #datapoints = 47
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 1101.47           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.01834
+
+initial set of free parameter values
+
+amp             = 406.074
+sigma           = 2.7
+mu              = 984.5
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 155.451
+rel. change during last iteration : -2.28468e-06
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.87962
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.53298
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1353.76          +/- 91.05        (6.726%)
+sigma           = 11.7198          +/- 0.7658       (6.534%)
+mu              = 1001.55          +/- 1.114        (0.1112%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.524  1.000 
+mu              0.531  0.656  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [684.500 : 744.500]
+        #datapoints = 47
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 901.024           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 2.31201
+
+initial set of free parameter values
+
+amp             = 683.558
+sigma           = 2.7
+mu              = 714.5
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 112.218
+rel. change during last iteration : -6.4853e-06
+
+degrees of freedom    (FIT_NDF)                        : 44
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.597
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.55041
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 332.782          +/- 29.13        (8.754%)
+sigma           = 1.47616          +/- 0.1117       (7.567%)
+mu              = 714.404          +/- 0.1324       (0.01853%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu             -0.000 -0.219  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [981.500 : 1041.50]
+        #datapoints = 60
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 966.605           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.625063
+
+initial set of free parameter values
+
+amp             = 412.842
+sigma           = 2.7
+mu              = 1011.5
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 110.144
+rel. change during last iteration : -2.94995e-07
+
+degrees of freedom    (FIT_NDF)                        : 57
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.39009
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.93235
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 1270.4           +/- 49.76        (3.917%)
+sigma           = 10.5365          +/- 0.3093       (2.935%)
+mu              = 1007.46          +/- 0.4251       (0.04219%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma           0.040  1.000 
+mu             -0.018 -0.153  1.000 
+
+
+*******************************************************************************
+Thu Feb  8 21:13:49 2018
+
+
+FIT:    data read from file u 1:($2 > 0 ? $2 : 1/0):3
+        format = x:z:s
+	y range restricted to [673.500 : 733.500]
+        #datapoints = 49
+function used for fitting: gaussian(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 229.668           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.39996
+
+initial set of free parameter values
+
+amp             = 473.753
+sigma           = 2.7
+mu              = 703.5
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 99.2061
+rel. change during last iteration : -1.25531e-06
+
+degrees of freedom    (FIT_NDF)                        : 46
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.46856
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.15665
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+amp             = 339.794          +/- 27.07        (7.967%)
+sigma           = 2.05983          +/- 0.1357       (6.589%)
+mu              = 703.114          +/- 0.1656       (0.02355%)
+
+
+correlation matrix of the fit parameters:
+
+               amp    sigma  mu     
+amp             1.000 
+sigma          -0.000  1.000 
+mu              0.000 -0.249  1.000 

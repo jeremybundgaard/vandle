@@ -5,6 +5,7 @@
 # then one could run -->    ./throttle_jobs.sh -ldf_paths path_to_many_ldfs.txt -final_dest /path/to/final/dest/folder
 
 run_script=/home/jeremy/vandle/macros/batchProcess_utkscan.sh
+config=/SCRATCH/DRunScratch1/ornl2016/Rb/configs/Config-rbTest.xml
 
 array=( "$@" )
 arraylength=${#array[@]}
@@ -35,6 +36,10 @@ if [[ ! -d $final_dest ]]; then
   mkdir -p $final_dest
 fi
 
+runDir=throttle_jobs_`basename $run_script`_`basename $ldf_paths .txt`
+mkdir $runDir
+cd $runDir
+
 nJobsToDo=`cat $ldf_paths | wc -l`
 nJobsCompleted=0
 timeStarted=$SECONDS
@@ -56,10 +61,12 @@ do
   	sleep $waittime
   	nLOCKS=`ls /home/jeremy/.locks/ |wc -l`
   done
-  echo "$run_script -i $ldf -c /SCRATCH/DRunScratch1/ornl2016/Rb/Config-rbTest.xml -b "
-  $run_script -i $ldf -c /SCRATCH/DRunScratch1/ornl2016/Rb/Config-rbTest.xml -b -final_dest $final_dest &
-  sleep .5
+  # echo "$run_script -i $ldf -c $config -b "
+  $run_script -i $ldf -c $config -b -final_dest $final_dest &
+  sleep 11
   ((++nJobsCompleted))
   percentComplete=$(echo "scale=2;$nJobsCompleted/$nJobsToDo*100" | bc)
   echo "${percentComplete%.*}% of jobs launched --> running for $(((SECONDS-timeStarted)/60)) minutes"
 done
+
+cd -
