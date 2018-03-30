@@ -34,8 +34,10 @@ if [[ ! -f $vandle_tree ]]; then
 	echo "-vandle_tree file doesn't exist"
 	usage
 fi
-isotope=`basename $vandle_tree Rb.root`
-topDir=`pwd`/${isotope}_vandlePlots_`date +%d%b%y_%H%M.%S`
+isotope=`basename $vandle_tree`
+isotope=${isotope%Rb*}
+echo $isotope
+topDir=`pwd`/${isotope}Rb_vandlePlots_`date +%d%b%y_%H%M.%S`
 runDir=$topDir/runDir
 plotDir=$topDir/plots
 mkdir $topDir $runDir $plotDir $plotDir/individual_runs
@@ -46,11 +48,12 @@ ln -s $vandle_tree tree_link
 lockfile=`dirname $topDir`/STILL_RUNNING_${isotope}Rb_ornl2016_vandlePlots_`date +%d%b%y_%H%M.%S`.LOCK
 touch $lockfile
 
-echo "root -l -q -b vandlePlots.C\(\"$vandle_tree\",\"$cuts\",\"${isotope}Rb\"\")"
-time  root -l -q -b vandlePlots.C\(\"$vandle_tree\",\"$cuts\",\"${isotope}Rb\"\)
+echo "root -l -q -b vandlePlots.C\(\"$vandle_tree\",\"$cuts\",\"$isotope\")"
+time  root -l -q -b vandlePlots.C\(\"$vandle_tree\",\"$cuts\",$isotope\)
 
 cd $topDir
+mv $runDir/*png $plotDir/.
 tar cf runDir.backup.tar.gz $runDir > /dev/null 2>&1
-# rm -rf $runDir
+rm -rf $runDir  > /dev/null 2>&1
 
 rm $lockfile
