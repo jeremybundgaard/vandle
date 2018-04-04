@@ -13,7 +13,6 @@
 #include "TGaxis.h"
 #include "TLegend.h"
 #include "TPaveStats.h"
-// #include "/home/jeremy/vandle/macros/vandlePlots.h"
 
 #include "TTreeReader.h"
 #include "TTreeReaderValue.h"
@@ -27,11 +26,11 @@
 #include <iomanip>
 #include <iostream>
 #include <math.h>
-// #include <set>
+
 #include <sstream>
 #include <stdlib.h>
 #include <vector>
-// #include
+
 
 int cutWidth_tof=300;
 int minTOF=70;
