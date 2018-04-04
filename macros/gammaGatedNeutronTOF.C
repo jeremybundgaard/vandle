@@ -259,7 +259,7 @@ for (int i = 0; i < HPGe_tree->GetEntries(); i++) {
   aux_BetaTime_nS = aux_BetaTime*8+1e-9;
   // printf("aux_BetaTime:%f \t aux_BetaTime_nS:%f \n",aux_BetaTime,aux_BetaTime_nS);
 
-  if(beta_neutron_time_set.find(aux_BetaTime_nS)!=beta_neutron_time_set.end()){
+  if(beta_neutron_time_set.count(aux_BetaTime_nS)){
     N_neutron_gated_gammas++;
     printf("N_neutron_gated_gammas:%d\n",N_neutron_gated_gammas);
     neutronGated_HPGe_tree->Fill();

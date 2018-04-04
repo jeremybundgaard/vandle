@@ -62,5 +62,11 @@ time  root -l -q -b gammaGatedNeutronTOF.C\(\"$gamma_tree\",\"$vandle_tree\",\"$
 cd $topDir
 find $topDir -name "*png" -exec mv {} $topDir/plots/. \; > /dev/null 2>&1
 tar cf runDir.backup.tar.gz $runDir > /dev/null 2>&1
+<<<<<<< Updated upstream
 gm montage -mode concatenate -tile 3x3 $topDir/plots/*png grid.png
+=======
+
+gm montage -mode concatenate -tile 3x3 $topDir/plots/*png quick_grid.png
+
+>>>>>>> Stashed changes
 rm -rf $runDir $lockfile
