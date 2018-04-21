@@ -34,8 +34,8 @@ if [[ ! -f $vandle_tree ]]; then
 	echo "-vandle_tree file doesn't exist"
 	usage
 fi
-isotope=`basename $vandle_tree`
-isotope=${isotope%Rb*}
+isotope=`basename $vandle_tree _vandleTree.root`
+# isotope=`basename $vandle_tree Rb_vandleTree.root`
 echo $isotope
 topDir=`pwd`/${isotope}Rb_vandlePlots_`date +%d%b%y_%H%M.%S`
 runDir=$topDir/runDir

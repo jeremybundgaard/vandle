@@ -11,7 +11,6 @@ usage ()
 }
 
 cuts=""
-
 array=( "$@" )
 arraylength=${#array[@]}
 for (( i=1; i<${arraylength}+1; i++ ));
@@ -28,27 +27,19 @@ do
 		echo "-cuts $cuts"
 	fi
 done
-
 if [[ ! -f $file_paths ]]; then
 	usage
 fi
 
 ORNL2016_workDir=`pwd`/ornl2016_vandlePlots_`date +%d%b%y_%H%M.%S`
 mkdir $ORNL2016_workDir; cd $ORNL2016_workDir
-
-# cat $file_paths|while read i
-# do
-# 	$macros/vandlePlots.sh -vandle_tree ${i} &
-# done
-
-cat $file_paths|while read i
+cat $file_paths | while read i
 do
 	# $macros/vandlePlots.sh -vandle_tree ${i} &
 	# $macros/vandlePlots_varyNeutron_TCut.sh -vandle_tree ${i} &
 	# $macros/ornl2016_gammaPlots.sh -gamma_tree ${i} &
-	# $macros/vandlePlots.sh -vandle_tree ${i} &
-	echo $macros/background_ornl2016.sh -vandle_tree ${i} &
-
+	$macros/vandlePlots.sh -vandle_tree ${i} &
+	# $macros/background_ornl2016.sh -vandle_tree ${i} &
 done
 
 # nLock="`ls $ORNL2016_workDir/*LOCK|wc`"
@@ -57,7 +48,6 @@ done
 # 	echo "waiting for these jobs to finish `ls $ORNL2016_workDir/*LOCK`"
 # 	sleep 1
 # done
-
 
 # gm montage -mode concatenate -tile 3x3 \
 # $ORNL2016_workDir/*/92*QDCvsTOF_grid.png \
@@ -72,7 +62,7 @@ done
 # $ORNL2016_workDir/combine_ornl2016_neutronTOF.png
 #
 # cd - > /dev/null 2>&1
-#
+
 # gm montage -mode concatenate -tile 3x3 \
 # `ls $ORNL2016_workDir/ornl2016_vandlePlots*/{92}*QDCvsTOF_grid.png` \
 # `ls $ORNL2016_workDir/ornl2016_vandlePlots*/{93}*QDCvsTOF_grid.png` \

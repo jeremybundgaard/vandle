@@ -6,7 +6,7 @@
 
 run_script=/home/jeremy/vandle/macros/batchProcess_utkscan.sh
 config=/SCRATCH/DRunScratch1/ornl2016/Rb/configs/Config-rbTest.xml
-
+Ncores=50
 array=( "$@" )
 arraylength=${#array[@]}
 for (( i=1; i<${arraylength}+1; i++ ));
@@ -18,10 +18,12 @@ do
     ldf_paths=${array[$i]}
     tmp=`basename $ldf_paths .txt `
     final_dest=/SCRATCH/DScratch3/jeremy/utkscan_output/${tmp}_`date +%d%b%Y_%H%M_%S`
-
 	fi
   if [[ "${array[$i-1]}" = "-final_dest" ]]; then
     final_dest=${array[$i]}
+	fi
+  if [[ "${array[$i-1]}" = "-Ncores" ]]; then
+    Ncores=${array[$i]}
 	fi
 done
 
@@ -52,9 +54,8 @@ do
   fi
   nLOCKS=`ls /home/jeremy/.locks/ |wc -l`
   # echo "nLOCKS: $nLOCKS"
-  ### each job will dominate a single core (donda:56 cores, kqxhc:24 cores)...so be neighborly ###
-  nJobs_allowed_at_a_Time=49
-  while [ $nLOCKS -gt $nJobs_allowed_at_a_Time ]
+  ### each job should utilize one core (donda:56 cores, kqxhc:24 cores)...so be neighborly ###
+  while [ $nLOCKS -gt $Ncores ]
   do
     waittime=60
   	echo "nLOCKS: $nLOCKS will try and scan ldf:$ldf in $waittime seconds"
@@ -69,4 +70,5 @@ do
   echo "${percentComplete%.*}% of jobs launched --> running for $(((SECONDS-timeStarted)/60)) minutes"
 done
 
+[ "$(ls -A $runDir)" ] && rm -rf $runDir
 cd -

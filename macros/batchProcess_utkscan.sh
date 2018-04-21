@@ -52,8 +52,10 @@ debugDir=$outdir/debug
 mkdir $outdir $debugDir
 cd $outdir
 
-let ldf="10#$ldf" ### deals with leading zeros for integer compare
+let ldf="10#$ldf" ### allows handling leading zeros for integer comparison
 micronet4_timeCals=/SCRATCH/DRunScratch1/ornl2016/Rb/configs/micronet4_timeCals
+micronet3_timeCals=/SCRATCH/DRunScratch1/ornl2016/Rb/configs/micronet3_timeCals
+(( "970000"<="$ldf")) && (("$ldf"<="970209" )) && config=${micronet3_timeCals}/0970203_Rb_timeCal_config.xml
 (( "975000"<="$ldf")) && (("$ldf"<="975001" )) && config=${micronet4_timeCals}/0975000_Rb_timeCal_config.xml
 (( "975101"<="$ldf")) && (("$ldf"<="975123" )) && config=${micronet4_timeCals}/0975103_Rb_timeCal_config.xml
 (( "975200"<="$ldf")) && (("$ldf"<="975203" )) && config=${micronet4_timeCals}/0975200_Rb_timeCal_config.xml
@@ -64,7 +66,7 @@ micronet4_timeCals=/SCRATCH/DRunScratch1/ornl2016/Rb/configs/micronet4_timeCals
 (( "985300"<="$ldf")) && (("$ldf"<="985303" )) && config=${micronet4_timeCals}/0985302_Rb_timeCal_config.xml
 (( "994000"<="$ldf")) && (("$ldf"<="994016" )) && config=${micronet4_timeCals}/0994007_Rb_timeCal_config.xml
 (( "995000"<="$ldf")) && (("$ldf"<="995002" )) && config=${micronet4_timeCals}/0995000_Rb_timeCal_config.xml
-(( "995003"<="$ldf")) && (("$ldf"<="995091" )) && config=${micronet4_timeCals}/0995010_Rb_timeCal_config.xml
+(( "995003"<="$ldf")) && (("$ldf"<="995010" )) && config=${micronet4_timeCals}/0995010_Rb_timeCal_config.xml
 (( "995100"<="$ldf")) && (("$ldf"<="995616" )) && config=${micronet4_timeCals}/0995130_Rb_timeCal_config.xml
 (("1000000"<="$ldf")) && (("$ldf"<="1000647")) && config=${micronet4_timeCals}/1000400_Rb_timeCal_config.xml
 
@@ -84,5 +86,6 @@ nice -n 3 $paassDir/install/bin/utkscan -i $local_infile -c $config -o $ldf $bat
 echo -e "\n -------- finished `date +%d%b%Y_%H%M.%S` -------- " >> stdout.log
 duration=$((SECONDS - start));echo -e "\n -------- scan duration `echo $( echo "scale=2;$duration/60" |bc -l) minutes ` -------- " >> stdout.log
 cd - > /dev/null 2>&1
+rm $outdir/$local_infile
 mv $outdir $final_dest
-rm $lockfile $outdir/$local_infile
+rm $lockfile

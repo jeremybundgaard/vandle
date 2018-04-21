@@ -35,7 +35,7 @@ if [[ ! -f $vandle_tree ]]; then
 	usage
 fi
 isotope=`basename $vandle_tree Rb_vandle.root`
-topDir=`pwd`/${isotope}_background_ornl2016_`date +%d%b%y_%H%M.%S`
+topDir=`pwd`/${isotope}Rb_backgroundStudys_ornl2016_`date +%d%b%y_%H%M.%S`
 runDir=$topDir/runDir
 plotDir=$topDir/plots
 mkdir $topDir $runDir $plotDir $plotDir/individual_runs
